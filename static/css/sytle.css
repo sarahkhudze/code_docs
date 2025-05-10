@@ -1,0 +1,82 @@
+.btn-purple {
+    background-color: #6a0dad;
+    color: white;
+}
+.btn-purple:hover {
+    background-color: #5a0a9d;
+    color: white;
+}
+
+.export-options {
+    margin-top: 10px;
+}
+.export-btn {
+    margin-right: 5px;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+}
+
+/* Form error messages */
+.errorlist {
+    color: #dc3545;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Form labels */
+form label {
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+/* Form inputs */
+.form-control {
+    margin-bottom: 1rem;
+}
+
+/* Dashboard specific styles */
+.table-hover tbody tr:hover {
+    background-color: rgba(106, 13, 173, 0.05);
+}
+
+.table th {
+    border-top: none;
+    font-weight: 500;
+    color: #6a0dad;
+}
+
+.btn-group .btn {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Status badges */
+.badge {
+    font-weight: 500;
+    padding: 0.35em 0.65em;
+}
+
+.badge.bg-success {
+    background-color: #28a745 !important;
+}
+
+.badge.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529;
+}
+
+/* Document type badges */
+.badge.bg-secondary { background-color: #6c757d !important; }
+.badge.bg-primary { background-color: #0d6efd !important; }
+.badge.bg-danger { background-color: #dc3545 !important; }
+
+/* Download buttons */
+.btn-download {
+    min-width: 120px;
+    transition: all 0.3s;
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

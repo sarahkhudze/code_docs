@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Documentation</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #6a0dad;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5a0a9d;
+            margin-top: 30px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        h3 {
+            color: #4a089d;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre code {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        .method-list {
+            padding-left: 20px;
+        }
+        .error {
+            color: #dc3545;
+            background: #fff0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+
+<h2>File: <code>dataloader.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>PredDataset</code> (Line 7)</h4>
+
+<p>Reads image and trimap pairs from folder.</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, img_dir, trimap_dir)</code><br />
+  <em>Line 12: No docstring</em></p>
+
+<ul>
+<li><p><code>__len__(self)</code><br />
+<em>Line 16: No docstring</em></p></li>
+<li><p><code>__getitem__(self, idx)</code><br />
+<em>Line 19: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>demo.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>np_to_torch(x)</code> (Line 16)</h4>
+
+<p>No docstring</p>
+
+<h4><code>scale_input(x, scale, scale_type)</code> (Line 20)</h4>
+
+<p>Scales inputs to multiple of 8. </p>
+
+<h4><code>predict_fba_folder(model, args)</code> (Line 29)</h4>
+
+<p>No docstring</p>
+
+<h4><code>pred(image_np, trimap_np, model)</code> (Line 46)</h4>
+
+<p>Predict alpha, foreground and background.
+Parameters:
+image<em>np -- the image in rgb format between 0 and 1. Dimensions: (h, w, 3)
+trimap</em>np -- two channel trimap, first background then foreground. Dimensions: (h, w, 2)
+Returns:
+fg: foreground image in rgb format between 0 and 1. Dimensions: (h, w, 3)
+bg: background image in rgb format between 0 and 1. Dimensions: (h, w, 3)
+alpha: alpha matte image between 0 and 1. Dimensions: (h, w)</p>
+
+<h2>File: <code>generate_trimap.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>trimap(probs, size, conf_threshold)</code> (Line 17)</h4>
+
+<p>Creates a trimap based on a simple dilation algorithm.</p>
+
+<h4><code>browse_and_process_image(target_class, conf_threshold, output_dir)</code> (Line 30)</h4>
+
+<p>Allows users to select an image file, processes it, and generates a trimap.</p>
+
+<h4><code>select_output_directory()</code> (Line 83)</h4>
+
+<p>Opens a dialog to select the output directory.</p>
+
+<h4><code>main()</code> (Line 92)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>gen_trimap.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>trimap(prob_map, kernel_size, conf_threshold)</code> (Line 19)</h4>
+
+<p>Generate a trimap from the probability map.</p>
+
+<h4><code>browse_and_process_image(target_class, conf_threshold, output_dir)</code> (Line 48)</h4>
+
+<p>Allows users to upload an image, processes it, and generates a trimap.</p>
+
+<h2>File: <code>layers_WS.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Conv2d</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, in_channels, out_channels, kernel_size, stride, padding, dilation, groups, bias)</code><br />
+  <em>Line 8: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x)</code><br />
+<em>Line 13: No docstring</em></li>
+</ul>
+
+<h2>File: <code>models.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>MattingModule</code> (Line 29)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, net_enc, net_dec)</code><br />
+  <em>Line 30: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, image, two_chan_trimap, image_n, trimap_transformed)</code><br />
+<em>Line 35: No docstring</em></li>
+</ul>
+
+<h4><code>ModelBuilder</code> (Line 41)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>build_encoder(self, arch)</code><br />
+  <em>Line 42: No docstring</em></p>
+
+<ul>
+<li><code>build_decoder(self, arch, batch_norm)</code><br />
+<em>Line 75: No docstring</em></li>
+</ul>
+
+<h4><code>ResnetDilatedBN</code> (Line 82)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, orig_resnet, dilate_scale)</code><br />
+  <em>Line 83: No docstring</em></p>
+
+<ul>
+<li><p><code>_nostride_dilate(self, m, dilate)</code><br />
+<em>Line 112: No docstring</em></p></li>
+<li><p><code>forward(self, x, return_feature_maps)</code><br />
+<em>Line 127: No docstring</em></p></li>
+</ul>
+
+<h4><code>Resnet</code> (Line 148)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, orig_resnet)</code><br />
+  <em>Line 149: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x, return_feature_maps)</code><br />
+<em>Line 168: No docstring</em></li>
+</ul>
+
+<h4><code>ResnetDilated</code> (Line 191)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, orig_resnet, dilate_scale)</code><br />
+  <em>Line 192: No docstring</em></p>
+
+<ul>
+<li><p><code>_nostride_dilate(self, m, dilate)</code><br />
+<em>Line 215: No docstring</em></p></li>
+<li><p><code>forward(self, x, return_feature_maps)</code><br />
+<em>Line 230: No docstring</em></p></li>
+</ul>
+
+<h4><code>fba_decoder</code> (Line 268)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, batch_norm)</code><br />
+  <em>Line 269: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, conv_out, img, indices, two_chan_trimap)</code><br />
+<em>Line 326: No docstring</em></li>
+</ul>
+
+<h2>File: <code>resnet_bn.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>BasicBlock</code> (Line 14)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, inplanes, planes, stride, downsample)</code><br />
+  <em>Line 17: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x)</code><br />
+<em>Line 27: No docstring</em></li>
+</ul>
+
+<h4><code>Bottleneck</code> (Line 46)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, inplanes, planes, stride, downsample)</code><br />
+  <em>Line 49: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x)</code><br />
+<em>Line 62: No docstring</em></li>
+</ul>
+
+<h4><code>ResNet</code> (Line 85)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, block, layers, num_classes)</code><br />
+  <em>Line 87: No docstring</em></p>
+
+<ul>
+<li><p><code>_make_layer(self, block, planes, blocks, stride)</code><br />
+<em>Line 116: No docstring</em></p></li>
+<li><p><code>forward(self, x)</code><br />
+<em>Line 133: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>resnet_GN_WS.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>BasicBlock</code> (Line 18)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, inplanes, planes, stride, downsample)</code><br />
+  <em>Line 21: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x)</code><br />
+<em>Line 31: No docstring</em></li>
+</ul>
+
+<h4><code>Bottleneck</code> (Line 50)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, inplanes, planes, stride, downsample)</code><br />
+  <em>Line 53: No docstring</em></p>
+
+<ul>
+<li><code>forward(self, x)</code><br />
+<em>Line 65: No docstring</em></li>
+</ul>
+
+<h4><code>ResNet</code> (Line 88)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, block, layers, num_classes)</code><br />
+  <em>Line 90: No docstring</em></p>
+
+<ul>
+<li><p><code>_make_layer(self, block, planes, blocks, stride)</code><br />
+<em>Line 105: No docstring</em></p></li>
+<li><p><code>forward(self, x)</code><br />
+<em>Line 121: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>transforms.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>dt(a)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>trimap_transform(trimap)</code> (Line 11)</h4>
+
+<p>No docstring</p>
+
+<h4><code>groupnorm_normalise_image(img, format)</code> (Line 31)</h4>
+
+<p>Accept rgb in range 0,1</p>
+
+<h4><code>groupnorm_denormalise_image(img, format)</code> (Line 45)</h4>
+
+<p>Accept rgb, normalised, return in range 0,1</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

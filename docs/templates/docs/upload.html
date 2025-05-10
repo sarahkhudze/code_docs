@@ -1,0 +1,22 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header text-white" style="background-color: #6a0dad;">
+                <h3 class="mb-0">Upload Python Project</h3>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-purple w-100">
+                        <i class="fas fa-upload me-2"></i>Upload Project
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

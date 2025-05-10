@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Documentation</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #6a0dad;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5a0a9d;
+            margin-top: 30px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        h3 {
+            color: #4a089d;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre code {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        .method-list {
+            padding-left: 20px;
+        }
+        .error {
+            color: #dc3545;
+            background: #fff0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+
+<h2>File: <code>manage.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>main()</code> (Line 7)</h4>
+
+<p>Run administrative tasks.</p>
+
+<h2>File: <code>asgi.py</code></h2>
+
+<h2>File: <code>settings.py</code></h2>
+
+<h2>File: <code>urls.py</code></h2>
+
+<h2>File: <code>wsgi.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>admin.py</code></h2>
+
+<h2>File: <code>apps.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>DocsConfig</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>forms.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CustomUserCreationForm</code> (Line 6)</h4>
+
+<p>Enhanced user registration form with email field and Bootstrap styling support</p>
+
+<p><strong>Methods:</strong>
+- <code>clean_email(self)</code><br />
+  <em>Line 28: No docstring</em></p>
+
+<h4><code>CustomAuthenticationForm</code> (Line 34)</h4>
+
+<p>Custom login form with Bootstrap styling</p>
+
+<h4><code>ProjectUploadForm</code> (Line 45)</h4>
+
+<p>Form for uploading Python project ZIP files with validation</p>
+
+<p><strong>Methods:</strong>
+- <code>clean_zip_file(self)</code><br />
+  <em>Line 63: No docstring</em></p>
+
+<h4><code>Meta</code> (Line 24)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Meta</code> (Line 49)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>models.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Project</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__str__(self)</code><br />
+  <em>Line 13: No docstring</em></p>
+
+<h4><code>GeneratedDocument</code> (Line 16)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__str__(self)</code><br />
+  <em>Line 31: No docstring</em></p>
+
+<h4><code>Meta</code> (Line 28)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>tests.py</code></h2>
+
+<h2>File: <code>urls.py</code></h2>
+
+<h2>File: <code>views.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>document_view(request, project_id, format_type)</code> (Line 34)</h4>
+
+<p>No docstring</p>
+
+<h4><code>signup_view(request)</code> (Line 84)</h4>
+
+<p>No docstring</p>
+
+<h4><code>logout_view(request)</code> (Line 96)</h4>
+
+<p>No docstring</p>
+
+<h4><code>preview_document(request, project_id)</code> (Line 100)</h4>
+
+<p>No docstring</p>
+
+<h4><code>get_file_info(file_path)</code> (Line 115)</h4>
+
+<p>No docstring</p>
+
+<h4><code>dashboard(request)</code> (Line 123)</h4>
+
+<p>No docstring</p>
+
+<h4><code>dashboard(request)</code> (Line 168)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_file(request, path)</code> (Line 214)</h4>
+
+<p>No docstring</p>
+
+<h4><code>delete_file(request)</code> (Line 223)</h4>
+
+<p>No docstring</p>
+
+<h4><code>signup_view(request)</code> (Line 259)</h4>
+
+<p>No docstring</p>
+
+<h4><code>login_view(request)</code> (Line 270)</h4>
+
+<p>No docstring</p>
+
+<h4><code>upload_project(request)</code> (Line 286)</h4>
+
+<p>No docstring</p>
+
+<h4><code>process_project(project_id)</code> (Line 308)</h4>
+
+<p>No docstring</p>
+
+<h4><code>get_documentation_files(user)</code> (Line 376)</h4>
+
+<p>Helper function to scan and return all documentation files for a user</p>
+
+<h4><code>download_doc(request, project_id, doc_type)</code> (Line 401)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_document(request, project_id, doc_type)</code> (Line 418)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_markdown(request, project_id)</code> (Line 448)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_html(request, project_id)</code> (Line 452)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_pdf(request, project_id)</code> (Line 456)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>0001_initial.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Migration</code> (Line 8)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>0002_project_html_file_project_markdown_file_and_more.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Migration</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>0003_generateddocument.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Migration</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>0004_remove_project_doc_file_remove_project_html_file_and_more.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Migration</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>code_parser.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>parse_python_file(file_path)</code> (Line 7)</h4>
+
+<p>Enhanced Python file parser with better error handling</p>
+
+<h4><code>parse_python_project(zip_path)</code> (Line 64)</h4>
+
+<p>Handle ZIP extraction and parse all Python files</p>
+
+<h2>File: <code>doc_generator.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>generate_markdown_doc(parsed_data)</code> (Line 8)</h4>
+
+<p>Generate comprehensive Markdown documentation with error handling</p>
+
+<h4><code>generate_html_doc(parsed_data)</code> (Line 46)</h4>
+
+<p>Generate styled HTML documentation with syntax highlighting</p>
+
+<h4><code>generate_pdf_doc(parsed_data, output_path)</code> (Line 108)</h4>
+
+<p>Generate PDF with proper error handling and configuration</p>
+
+<h2>File: <code>pdf_utils.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>get_wkhtmltopdf_path()</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

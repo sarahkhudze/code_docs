@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Documentation</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #6a0dad;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5a0a9d;
+            margin-top: 30px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        h3 {
+            color: #4a089d;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre code {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        .method-list {
+            padding-left: 20px;
+        }
+        .error {
+            color: #dc3545;
+            background: #fff0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+
+<h2>File: <code>manage.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>main()</code> (Line 7)</h4>
+
+<p>Run administrative tasks.</p>
+
+<h2>File: <code>asgi.py</code></h2>
+
+<h2>File: <code>settings.py</code></h2>
+
+<h2>File: <code>urls.py</code></h2>
+
+<h2>File: <code>wsgi.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>admin.py</code></h2>
+
+<h2>File: <code>apps.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>DocumentationConfig</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>forms.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>SearchForm</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>generators.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>DocumentationGenerator</code> (Line 9)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 10: No docstring</em></p>
+
+<ul>
+<li><p><code>generate(self, parsed_data, format)</code><br />
+<em>Line 14: No docstring</em></p></li>
+<li><p><code>_generate_markdown(self, parsed_data)</code><br />
+<em>Line 24: No docstring</em></p></li>
+<li><p><code>_generate_html(self, parsed_data)</code><br />
+<em>Line 47: No docstring</em></p></li>
+<li><p><code>_generate_pdf(self, parsed_data)</code><br />
+<em>Line 54: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>models.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Project</code> (Line 3)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__str__(self)</code><br />
+  <em>Line 9: No docstring</em></p>
+
+<h4><code>Documentation</code> (Line 12)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__str__(self)</code><br />
+  <em>Line 28: No docstring</em></p>
+
+<h4><code>Meta</code> (Line 25)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>parsers.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CodeParser</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 6: No docstring</em></p>
+
+<ul>
+<li><p><code>parse_file(self, file_path)</code><br />
+<em>Line 10: No docstring</em></p></li>
+<li><p><code>_parse_arguments(self, arguments)</code><br />
+<em>Line 48: No docstring</em></p></li>
+<li><p><code>parse_directory(self, root_dir)</code><br />
+<em>Line 76: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>serializers.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>ProjectSerializer</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<h4><code>DocumentationSerializer</code> (Line 9)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Meta</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Meta</code> (Line 10)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>tests.py</code></h2>
+
+<h2>File: <code>urls.py</code></h2>
+
+<h2>File: <code>views.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>HomeView</code> (Line 16)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get_context_data(self)</code><br />
+  <em>Line 18: No docstring</em></p>
+
+<h4><code>ProjectDetailView</code> (Line 36)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get_context_data(self)</code><br />
+  <em>Line 40: No docstring</em></p>
+
+<h4><code>ProjectViewSet</code> (Line 46)</h4>
+
+<p>No docstring</p>
+
+<h4><code>GenerateDocsView</code> (Line 50)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get(self, request)</code><br />
+  <em>Line 53: No docstring</em></p>
+
+<h4><code>ExportDocumentationView</code> (Line 80)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get(self, request)</code><br />
+  <em>Line 81: No docstring</em></p>
+
+<ul>
+<li><p><code>_serve_pdf(self, documentation)</code><br />
+<em>Line 112: No docstring</em></p></li>
+<li><p><code>_serve_text(self, documentation)</code><br />
+<em>Line 116: No docstring</em></p></li>
+</ul>
+
+<h4><code>SearchView</code> (Line 120)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>form_valid(self, form)</code><br />
+  <em>Line 124: No docstring</em></p>
+
+<h4><code>ProjectListView</code> (Line 130)</h4>
+
+<p>No docstring</p>
+
+<h4><code>ProjectCreateView</code> (Line 134)</h4>
+
+<p>No docstring</p>
+
+<h4><code>RecentDocsView</code> (Line 140)</h4>
+
+<p>No docstring</p>
+
+<h4><code>PDFExportsView</code> (Line 145)</h4>
+
+<p>No docstring</p>
+
+<h4><code>MarkdownView</code> (Line 150)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get_context_data(self)</code><br />
+  <em>Line 153: No docstring</em></p>
+
+<h4><code>AIAssistantView</code> (Line 159)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get_context_data(self)</code><br />
+  <em>Line 162: No docstring</em></p>
+
+<h4><code>SettingsView</code> (Line 167)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>get_context_data(self)</code><br />
+  <em>Line 170: No docstring</em></p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>0001_initial.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Migration</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <!-- Header with download options -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-purple">
+            <i class="fas fa-file-alt me-2"></i>{{ project.name }} Documentation
+        </h2>
+        <div class="btn-group">
+            <a href="{% url 'download_doc' project.id 'markdown' %}" 
+               class="btn btn-sm btn-outline-secondary">
+               <i class="fas fa-file-code me-1"></i> Markdown
+            </a>
+            <a href="{% url 'download_doc' project.id 'html' %}" 
+               class="btn btn-sm btn-outline-primary">
+               <i class="fas fa-file-code me-1"></i> HTML
+            </a>
+            <a href="{% url 'download_doc' project.id 'pdf' %}" 
+               class="btn btn-sm btn-outline-danger">
+               <i class="fas fa-file-pdf me-1"></i> PDF
+            </a>
+        </div>
+    </div>
+
+    <!-- Documentation Preview -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body documentation-preview">
+            {{ html_content|safe }}
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="{% url 'dashboard' %}" class="btn btn-purple">
+        <i class="fas fa-arrow-left me-2"></i> Back to Dashboard
+    </a>
+</div>
+
+<style>
+    /* Custom preview styling */
+    .documentation-preview {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+    }
+    .documentation-preview h1 {
+        color: #6a0dad;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+    }
+    .documentation-preview h2 {
+        color: #5a0a9d;
+        margin-top: 25px;
+    }
+    .documentation-preview code {
+        background: #f8f9fa;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+    }
+</style>
+{% endblock %}
