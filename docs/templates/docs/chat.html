@@ -1,0 +1,189 @@
+{% extends 'docs/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow">
+                <div class="card-header bg-purple text-white">
+                    <h5 class="mb-0"><i class="fas fa-robot me-2"></i>Chat with CodeDocs AI</h5>
+                </div>
+                <div class="card-body">
+                    <!-- Chat Messages Container -->
+                    <div id="chat-messages" class="chat-container mb-4" style="height: 400px; overflow-y: auto;">
+                        <div class="welcome-message text-center py-4">
+                            <i class="fas fa-robot fa-3x text-purple mb-3"></i>
+                            <h5>Welcome to CodeDocs AI Assistant</h5>
+                            <p class="text-muted">Upload your documentation or ask questions about your code!</p>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload Section -->
+                    <div class="upload-section mb-3">
+                        <div class="input-group">
+                            <input type="file" class="form-control" id="documentUpload" accept=".pdf,.doc,.docx">
+                            <button class="btn btn-outline-purple" type="button" id="uploadBtn">
+                                <i class="fas fa-upload me-1"></i> Upload
+                            </button>
+                        </div>
+                        <small class="text-muted">Supported formats: PDF, DOC, DOCX</small>
+                    </div>
+
+                    <!-- Chat Input Section -->
+                    <div class="chat-input">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="userMessage" 
+                                   placeholder="Type your question here..." 
+                                   onkeypress="if(event.keyCode==13) sendMessage()">
+                            <button class="btn btn-purple" type="button" onclick="sendMessage()">
+                                <i class="fas fa-paper-plane me-1"></i> Send
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_css %}
+<style>
+    .chat-container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    .chat-message {
+        margin: 10px 0;
+        padding: 10px 15px;
+        border-radius: 15px;
+        max-width: 80%;
+    }
+    
+    .user-message {
+        background-color: #e3f2fd;
+        margin-left: auto;
+        border-top-right-radius: 5px;
+    }
+    
+    .ai-message {
+        background-color: #fff;
+        margin-right: auto;
+        border-top-left-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .bg-purple {
+        background-color: #6f42c1;
+    }
+    
+    .btn-purple {
+        background-color: #6f42c1;
+        color: white;
+    }
+    
+    .btn-purple:hover {
+        background-color: #5a32a3;
+        color: white;
+    }
+    
+    .btn-outline-purple {
+        border-color: #6f42c1;
+        color: #6f42c1;
+    }
+    
+    .btn-outline-purple:hover {
+        background-color: #6f42c1;
+        color: white;
+    }
+    
+    .text-purple {
+        color: #6f42c1;
+    }
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatMessages = document.getElementById('chat-messages');
+    const userMessage = document.getElementById('userMessage');
+    const documentUpload = document.getElementById('documentUpload');
+    const uploadBtn = document.getElementById('uploadBtn');
+
+    window.sendMessage = function() {
+        const message = userMessage.value.trim();
+        if (!message) return;
+
+        addMessage(message, true);
+        userMessage.value = '';
+
+        // Send message to backend
+        fetch('{% url "docs:chat_endpoint" %}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify({ message: message })
+        })
+        .then(response => response.json())
+        .then(data => {
+            addMessage(data.response, false);
+        })
+        .catch(error => {
+            addMessage('Sorry, there was an error processing your request.', false);
+        });
+    };
+
+    uploadBtn.addEventListener('click', function() {
+        const file = documentUpload.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('document', file);
+
+        fetch('{% url "docs:upload_document" %}', {
+            method: 'POST',
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            addMessage('Document uploaded successfully! You can now ask questions about it.', false);
+        })
+        .catch(error => {
+            addMessage('Error uploading document.', false);
+        });
+    });
+
+    function addMessage(message, isUser) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user-message' : 'ai-message'}`;
+        messageDiv.textContent = message;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
+{% endblock %}
+{% endblock %}

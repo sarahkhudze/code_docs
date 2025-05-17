@@ -3,9 +3,14 @@
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2><i class="fas fa-tachometer-alt me-2"></i> Project Dashboard</h2>
-        <a href="{% url 'docs:upload' %}" class="btn btn-purple">
-            <i class="fas fa-plus me-1"></i> New Project
-        </a>
+        <div>
+            <a href="{% url 'docs:chat' %}" class="btn btn-info me-2">
+                <i class="fas fa-comments me-1"></i> Chat with CodeDocs
+            </a>
+            <a href="{% url 'docs:upload' %}" class="btn btn-purple">
+                <i class="fas fa-plus me-1"></i> New Project
+            </a>
+        </div>
     </div>
 
     
@@ -127,3 +132,119 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 {% endblock %}
+
+<!-- Chat Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="chatModalLabel">Chat with CodeDocs AI</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-container" style="height: 400px; overflow-y: auto;">
+                    <div id="chat-messages" class="mb-3"></div>
+                </div>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="documentUpload" accept=".pdf,.doc,.docx">
+                    <button class="btn btn-outline-secondary" type="button" id="uploadBtn">Upload</button>
+                </div>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="userMessage" placeholder="Type your question...">
+                    <button class="btn btn-primary" type="button" id="sendMessage">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add this to your existing script section -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const processingItems = document.querySelectorAll('.fa-spinner');
+    if (processingItems.length > 0) {
+        setTimeout(() => {
+            location.reload();
+        }, 5000); // Refresh every 5 seconds
+    }
+
+    // Chat functionality
+    const chatMessages = document.getElementById('chat-messages');
+    const userMessage = document.getElementById('userMessage');
+    const sendMessage = document.getElementById('sendMessage');
+    const documentUpload = document.getElementById('documentUpload');
+    const uploadBtn = document.getElementById('uploadBtn');
+
+    function addMessage(message, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user-message' : 'ai-message'} mb-2`;
+        messageDiv.style.padding = '10px';
+        messageDiv.style.borderRadius = '10px';
+        messageDiv.style.backgroundColor = isUser ? '#e3f2fd' : '#f5f5f5';
+        messageDiv.textContent = message;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    sendMessage.addEventListener('click', async () => {
+        const message = userMessage.value.trim();
+        if (!message) return;
+
+        addMessage(message, true);
+        userMessage.value = '';
+
+        try {
+            const response = await fetch('/api/chat/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({ message: message })
+            });
+            const data = await response.json();
+            addMessage(data.response);
+        } catch (error) {
+            addMessage('Sorry, there was an error processing your request.');
+        }
+    });
+
+    uploadBtn.addEventListener('click', async () => {
+        const file = documentUpload.files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('document', file);
+
+        try {
+            const response = await fetch('/api/upload-document/', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: formData
+            });
+            const data = await response.json();
+            addMessage('Document uploaded successfully! You can now ask questions about it.');
+        } catch (error) {
+            addMessage('Error uploading document.');
+        }
+    });
+
+    // CSRF Token helper function
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+});
+</script>
