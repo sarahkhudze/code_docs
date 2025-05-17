@@ -1,3 +1,4 @@
+from importlib.resources import contents
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -26,8 +27,63 @@ from django.views.decorators.http import require_POST
 from django.utils.timezone import make_aware
 from datetime import datetime
 from django.core.files import File
+from google import genai
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_protect
+from django.conf import settings
+import json
 
+# Configure Gemini with your API key
+client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
+# Generate content
+try:
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents="Analyze and explain best practices for writing clean, maintainable code documentation and provide examples of effective documentation patterns in Python"
+    )
+    print("Response:", response.text)
+except Exception as e:
+    print("Error:", str(e))
+
+# Update the chat endpoint to use the new client
+@csrf_protect
+def chat_endpoint(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            message = data.get('message')
+            
+            # Get response from Gemini using the new client
+            response = client.models.generate_content(
+                model="gemini-2.0-flash",
+                contents=message
+            )
+            
+            return JsonResponse({
+                'response': response.text
+            })
+        except Exception as e:
+            return JsonResponse({
+                'error': str(e)
+            }, status=500)
+    return JsonResponse({'error': 'Method not allowed'}, status=405)
+
+@csrf_protect
+def upload_document(request):
+    if request.method == 'POST':
+        try:
+            document = request.FILES['document']
+            # Process the document using Gemini
+            # Store the document content for future reference
+            
+            return JsonResponse({
+                'message': 'Document uploaded successfully'
+            })
+        except Exception as e:
+            return JsonResponse({
+                'error': str(e)
+            }, status=500)
 
 def document_view(request, project_id, format_type):
     project = Project.objects.get(id=project_id, user=request.user)
@@ -398,3 +454,7 @@ def download_html(request, project_id):
 def download_pdf(request, project_id):
     project = get_object_or_404(Project, id=project_id, user=request.user)
     return FileResponse(project.pdf_file, as_attachment=True, filename=f"{project.name}_docs.pdf")
+
+
+def chat_view(request):
+    return render(request, 'docs/chat.html')
