@@ -1,0 +1,4436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Documentation</title>
+    <meta charset="UTF-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #6a0dad;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #5a0a9d;
+            margin-top: 30px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        h3 {
+            color: #4a089d;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre code {
+            display: block;
+            padding: 15px;
+            overflow-x: auto;
+        }
+        .method-list {
+            padding-left: 20px;
+        }
+        .error {
+            color: #dc3545;
+            background: #fff0f0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+
+<h2>File: <code>setup.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>load_text(path)</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>benchmark_image_sizes.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>get_memory_usage()</code> (Line 14)</h4>
+
+<p>No docstring</p>
+
+<h4><code>log_memory_usage(memory_usage, log_interval)</code> (Line 20)</h4>
+
+<p>No docstring</p>
+
+<h4><code>build_solver(solver_name, A, Acsr, Acsc, Acoo, AL, b, atol, rtol)</code> (Line 28)</h4>
+
+<p>No docstring</p>
+
+<h4><code>run_solver_single_image(solver_name, scale, index)</code> (Line 102)</h4>
+
+<p>No docstring</p>
+
+<h4><code>run_solver(solver_name)</code> (Line 194)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 214)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>calculate_laplacian_error.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>compute_alpha(image, trimap, laplacian_name, is_fg, is_bg, is_known)</code> (Line 18)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 59)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>config.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>get_library_path(name)</code> (Line 33)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>plot_laplacian_average_error.py</code></h2>
+
+<h2>File: <code>plot_laplacian_error_per_image.py</code></h2>
+
+<h2>File: <code>plot_results.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>make_fancy_bar_plot(filename, title, xlabel, xticks, bar_widths, bar_labels, xerr)</code> (Line 19)</h4>
+
+<p>No docstring</p>
+
+<h4><code>plot_memory_usage()</code> (Line 51)</h4>
+
+<p>No docstring</p>
+
+<h4><code>plot_time()</code> (Line 95)</h4>
+
+<p>No docstring</p>
+
+<h4><code>plot_time_image_size()</code> (Line 138)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>solve_amgcl.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>solve_amgcl_csr(csr_values, csr_indices, csr_indptr, b, x, atol, rtol, maxiter)</code> (Line 26)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 79)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>solve_eigen.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>solve_eigen_icholt_coo(coo_data, row, col, b, rtol, initial_shift)</code> (Line 37)</h4>
+
+<p>No docstring</p>
+
+<h4><code>solve_eigen_cholesky_coo(coo_data, row, col, b)</code> (Line 79)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 112)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>solve_mumps.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>solve_mumps_coo(coo_values, i_inds, j_inds, b, x, is_symmetric, print_info)</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 73)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>solve_petsc.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>solve_petsc_coo(coo_values, i_inds, j_inds, b, x, atol, rtol, gamg_threshold, maxiter)</code> (Line 35)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 86)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__about__.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>estimate_alpha_cf.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_cf(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Closed-Form Alpha Matting as proposed by :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: ichol)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>cf_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver
+is_known: numpy.ndarray
+    Binary mask of pixels for which to compute the laplacian matrix.
+    Providing this parameter might improve performance if few pixels are unknown.</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>cf(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_knn.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_knn(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using KNN Matting similar to :cite:<code>chen2013knn</code>.
+See <code>knn_laplacian</code> for more details.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: jacobi)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>knn_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>knn(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"n<em>neighbors": [15, 10]},
+      ...     cg</em>kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_lbdm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_lbdm(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Learning Based Digital Matting as proposed by :cite:<code>zheng2009learning</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: ichol)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>lbdm_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>lbdm(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_lkm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_lkm(image, trimap, laplacian_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimate alpha from an input image and an input trimap as described in Fast Matting Using Large Kernel Matting Laplacian Matrices by :cite:<code>he2010fast</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>lkm_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>lkm(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6, "radius": 15},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>A_matvec(x)</code> (Line 54)</h4>
+
+<p>No docstring</p>
+
+<h4><code>jacobi(x)</code> (Line 57)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>estimate_alpha_rw.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_rw(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Learning Based Digital Matting as proposed by :cite:<code>grady2005random</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: jacobi)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>rw_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>rw(
+      ....    image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"sigma": 0.03},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_sm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_sm(image, trimap, return_foreground_background, trimap_expansion_radius, trimap_expansion_threshold, sample_gathering_angles, sample_gathering_weights, sample_gathering_Np_radius, sample_refinement_radius, local_smoothing_radius1, local_smoothing_radius2, local_smoothing_radius3, local_smoothing_sigma_sq1, local_smoothing_sigma_sq2, local_smoothing_sigma_sq3)</code> (Line 4)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Shared Matting as proposed by :cite:<code>GastalOliveira2010SharedMatting</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+return<em>foreground</em>background: numpy.ndarray
+    Whether to return foreground and background estimate. They will be computed either way
+trimap<em>expansion</em>radius: int
+    How much to expand trimap.
+trimap<em>expansion</em>threshold: float
+    Which pixel colors are similar enough to expand trimap into
+sample<em>gathering</em>angles: int
+    In how many directions to search for new samples.
+sample<em>gathering</em>weights: Tuple[float, float, float, float]
+    Weights for various cost functions
+sample<em>gathering</em>Np<em>radius: int
+    Radius of Np function
+sample</em>refinement<em>radius: int
+    Search region for better neighboring samples
+local</em>smoothing<em>radius1: int
+    Radius for foreground/background smoothing
+local</em>smoothing<em>radius2: int
+    Radius for confidence computation
+local</em>smoothing<em>radius3: int
+    Radius for low frequency alpha computation
+local</em>smoothing<em>sigma</em>sq1: float
+    Squared sigma value for foreground/background smoothing
+    Defaults to :code:<code>(2 * local_smoothing_radius1 + 1)**2 / (9 * pi)</code> if not given
+local<em>smoothing</em>sigma<em>sq2: float
+    Squared sigma value for confidence computation
+local</em>smoothing<em>sigma</em>sq3: float
+    Squared sigma value for low frequency alpha computation
+    Defaults to :code:<code>(2 * local_smoothing_radius3 + 1)**2 / (9 * pi)</code> if not given</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte
+foreground: numpy.ndarray
+    Estimated foreground
+background: numpy.ndarray
+    Estimated background</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha, foreground, background = estimate</em>alpha<em>sm(
+      ...     image,
+      ...     trimap,
+      ...     return</em>foreground<em>background=True,
+      ...     sample</em>gathering_angles=4)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>estimate_alpha(I, F, B)</code> (Line 168)</h4>
+
+<p>No docstring</p>
+
+<h4><code>inner(a, b)</code> (Line 186)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Mp2(I, F, B)</code> (Line 193)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Np(image, x, y, F, B, r)</code> (Line 203)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Ep(image, px, py, sx, sy)</code> (Line 214)</h4>
+
+<p>No docstring</p>
+
+<h4><code>dist(a, b)</code> (Line 260)</h4>
+
+<p>No docstring</p>
+
+<h4><code>length(a)</code> (Line 267)</h4>
+
+<p>No docstring</p>
+
+<h4><code>expand_trimap(expanded_trimap, trimap, image, k_i, k_c)</code> (Line 271)</h4>
+
+<p>No docstring</p>
+
+<h4><code>sample_gathering(gathering_F, gathering_B, gathering_alpha, image, trimap, num_angles, eN, eA, ef, eb, Np_radius)</code> (Line 302)</h4>
+
+<p>No docstring</p>
+
+<h4><code>sample_refinement(refined_F, refined_B, refined_alpha, gathering_F, gathering_B, image, trimap, radius)</code> (Line 433)</h4>
+
+<p>No docstring</p>
+
+<h4><code>local_smoothing(final_F, final_B, final_alpha, refined_F, refined_B, refined_alpha, image, trimap, radius1, radius2, radius3, sigma_sq1, sigma_sq2, sigma_sq3)</code> (Line 488)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>cutout.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>cutout(image_path, trimap_path, cutout_path)</code> (Line 6)</h4>
+
+<p>Generate a cutout image from an input image and an input trimap.
+This method is using closed-form alpha matting as proposed by :cite:<code>levin2007closed</code> and multi-level foreground extraction :cite:<code>germer2020multilevel</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image<em>path: str
+    Path of input image
+trimap</em>path: str
+    Path of input trimap
+cutout_path: str
+    Path of output cutout image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>cutout("../data/lemur.png", "../data/lemur<em>trimap.png", "lemur</em>cutout.png")</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>estimate_foreground_cf.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_cf(image, alpha, regularization, rtol, neighbors, return_background, foreground_guess, background_guess, ichol_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimates the foreground of an image given alpha matte and image.</p>
+
+<p>This method is based on the publication :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Input image with shape :math:<code>h \times  w \times d</code>
+alpha: numpy.ndarray
+    Input alpha matte with shape :math:<code>h \times  w</code>
+regularization: float
+    Regularization strength :math:<code>\epsilon</code>, defaults to :math:<code>10^{-5}</code>
+neighbors: list of tuples of ints
+    List of relative positions that define the neighborhood of a pixel
+return<em>background: bool
+    Whether to return the estimated background in addition to the foreground
+foreground</em>guess: numpy.ndarray
+    An initial guess for the foreground image in order to accelerate convergence.
+    Using input image by default.
+background<em>guess: numpy.ndarray
+    An initial guess for the background image.
+    Using input image by default.
+ichol</em>kwargs: dictionary
+    Keyword arguments for the incomplete Cholesky preconditioner
+cg_kwargs: dictionary
+    Keyword arguments for the conjugate gradient descent solver</p>
+
+<h2>Returns</h2>
+
+<p>F: numpy.ndarray
+    Extracted foreground
+B: numpy.ndarray
+    Extracted background (not returned by default)</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur<em>alpha.png", "GRAY")
+      F = estimate</em>foreground<em>cf(image, alpha, return</em>background=False)
+      F, B = estimate<em>foreground</em>cf(image, alpha, return_background=True)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>See Also</h2>
+
+<p>stack_images: This function can be used to place the foreground on a new background.</p>
+
+<h2>File: <code>estimate_foreground_ml.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_resize_nearest_multichannel(dst, src)</code> (Line 6)</h4>
+
+<p>Internal method.</p>
+
+<p>Resize image src to dst using nearest neighbors filtering.
+Images must have multiple color channels, i.e. :code:<code>len(shape) == 3</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>dst: numpy.ndarray of type np.float32
+    output image
+src: numpy.ndarray of type np.float32
+    input image</p>
+
+<h4><code>_resize_nearest(dst, src)</code> (Line 33)</h4>
+
+<p>Internal method.</p>
+
+<p>Resize image src to dst using nearest neighbors filtering.
+Images must be grayscale, i.e. :code:<code>len(shape) == 3</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>dst: numpy.ndarray of type np.float32
+    output image
+src: numpy.ndarray of type np.float32
+    input image</p>
+
+<h4><code>_estimate_fb_ml(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, gradient_weight)</code> (Line 62)</h4>
+
+<p>No docstring</p>
+
+<h4><code>estimate_foreground_ml(image, alpha, regularization, n_small_iterations, n_big_iterations, small_size, return_background, gradient_weight)</code> (Line 186)</h4>
+
+<p>Estimates the foreground of an image given its alpha matte.</p>
+
+<p>See :cite:<code>germer2020multilevel</code> for reference.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Input image with shape :math:<code>h \times  w \times d</code>
+alpha: numpy.ndarray
+    Input alpha matte shape :math:<code>h \times  w</code>
+regularization: float
+    Regularization strength :math:<code>\epsilon</code>, defaults to :math:<code>10^{-5}</code>.
+    Higher regularization results in smoother colors.
+n<em>small</em>iterations: int
+    Number of iterations performed on small scale, defaults to :math:<code>10</code>
+n<em>big</em>iterations: int
+    Number of iterations performed on large scale, defaults to :math:<code>2</code>
+small<em>size: int
+    Threshold that determines at which size <code>n_small_iterations</code> should be used
+return</em>background: bool
+    Whether to return the estimated background in addition to the foreground
+gradient_weight: float
+    Larger values enforce smoother foregrounds, defaults to :math:<code>1</code></p>
+
+<h2>Returns</h2>
+
+<p>F: numpy.ndarray
+    Extracted foreground
+B: numpy.ndarray
+    Extracted background</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur<em>alpha.png", "GRAY")
+      F = estimate</em>foreground<em>ml(image, alpha, return</em>background=False)
+      F, B = estimate<em>foreground</em>ml(image, alpha, return_background=True)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>See Also</h2>
+
+<p>stack_images: This function can be used to place the foreground on a new background.</p>
+
+<h2>File: <code>estimate_foreground_ml_cupy.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_ml_cupy(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, block_size, return_background, to_numpy)</code> (Line 110)</h4>
+
+<p>See the :code:<code>estimate_foreground</code> method for documentation.</p>
+
+<h4><code>resize_nearest(dst, src, w_src, h_src, w_dst, h_dst, depth)</code> (Line 152)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>estimate_foreground_ml_pyopencl.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_ml_pyopencl(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, return_background)</code> (Line 104)</h4>
+
+<p>See the :code:<code>estimate_foreground</code> method for documentation.</p>
+
+<h4><code>upload(array)</code> (Line 115)</h4>
+
+<p>No docstring</p>
+
+<h4><code>alloc()</code> (Line 123)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download(device_buf, shape)</code> (Line 127)</h4>
+
+<p>No docstring</p>
+
+<h4><code>resize_nearest(dst, src, w_src, h_src, w_dst, h_dst, depth)</code> (Line 154)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>cf_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_cf_laplacian(image, epsilon, r, values, indices, indptr, is_known)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>cf_laplacian(image, epsilon, radius, is_known)</code> (Line 132)</h4>
+
+<p>This function implements the alpha estimator for closed-form alpha matting
+as proposed by :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+   Image with shape :math:<code>h\times w \times 3</code>
+epsilon: float
+   Regularization strength, defaults to :math:<code>10^{-7}</code>. Strong
+   regularization improves convergence but results in smoother alpha mattes.
+radius: int
+   Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+   pixels are considered.
+   The size of the local window is given as :math:<code>(2 r + 1)^2</code>, where
+   :math:<code>r</code> denotes         the radius. A larger radius might lead to
+   violated color line constraints, but also
+   favors further propagation of information within the image.
+is_known: numpy.ndarray
+    Binary mask of pixels for which to compute the laplacian matrix.
+    Laplacian entries for known pixels will have undefined values.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>knn_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>knn_laplacian(image, n_neighbors, distance_weights, kernel)</code> (Line 7)</h4>
+
+<p>This function calculates the KNN matting Laplacian matrix similar to
+:cite:<code>chen2013knn</code>.
+We use a kernel of 1 instead of a soft kernel by default since the former is
+faster to compute and both produce almost identical results in all our
+experiments, which is to be expected as the soft kernel is very close to 1
+in most cases.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+n<em>neighbors: list of ints
+    Number of neighbors to consider. If :code:<code>len(n_neighbors)&gt;1</code> multiple
+    nearest neighbor calculations are done and merged, defaults to
+    <code>[20, 10]</code>, i.e. first 20 neighbors are considered and in the second run
+    :math:<code>10</code> neighbors. The pixel distances are then weighted by the
+    :code:<code>distance_weights</code>.
+distance</em>weights: list of floats
+    Weight of distance in feature vector, defaults to <code>[2.0, 0.1]</code>.
+kernel: str
+    Must be either "binary" or "soft". Default is "binary".</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian matrix</p>
+
+<h2>File: <code>laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>make_linear_system(L, trimap, lambda_value, return_c)</code> (Line 5)</h4>
+
+<p>This function constructs a linear system from a matting Laplacian by
+constraining the foreground and background pixels with a diagonal matrix
+<code>C</code> to values in the right-hand-side vector <code>b</code>. The constraints are
+weighted by a factor :math:<code>\lambda</code>. The linear system is given as</p>
+
+<p>.. math::</p>
+
+<p>A = L + \lambda C,</p>
+
+<p>where :math:<code>C=\mathop{Diag}(c)</code> having :math:<code>c_i = 1</code> if pixel i is known
+and :math:<code>c_i = 0</code> otherwise.
+The right-hand-side :math:<code>b</code> is a vector with entries :math:<code>b_i = 1</code> is
+pixel is is a foreground pixel and :math:<code>b_i = 0</code> otherwise.</p>
+
+<h2>Parameters</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Laplacian matrix, e.g. calculated with :code:<code>lbdm_laplacian</code> function
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h\times w</code>
+lambda<em>value: float
+    Constraint penalty, defaults to 100
+return</em>c: bool
+    Whether to return the constraint matrix <code>C</code>, defaults to False</p>
+
+<h2>Returns</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix describing the system of linear equations
+b: numpy.ndarray
+    Vector describing the right-hand side of the system
+C: numpy.ndarray
+    Vector describing the diagonal entries of the matrix <code>C</code>, only returned
+    if <code>return_c</code> is set to True</p>
+
+<h2>File: <code>lbdm_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>calculate_kernel_matrix(X, v)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_lbdm_laplacian(image, epsilon, r)</code> (Line 16)</h4>
+
+<p>No docstring</p>
+
+<h4><code>lbdm_laplacian(image, epsilon, radius)</code> (Line 64)</h4>
+
+<p>Calculate a Laplacian matrix based on :cite:<code>zheng2009learning</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+   Image with shape :math:<code>h\times w \times 3</code>
+epsilon: float
+   Regularization strength, defaults to :math:<code>10^{-7}</code>. Strong
+   regularization improves convergence but results in smoother alpha mattes.
+radius: int
+   Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+   pixels are considered. The size of the local window is given as
+   :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+   might lead to violated color line constraints, but also favors further
+   propagation of information within the image.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.csr_matrix
+    Matting Laplacian</p>
+
+<h2>File: <code>lkm_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>lkm_laplacian(image, epsilon, radius, return_diagonal)</code> (Line 6)</h4>
+
+<p>Calculates the Laplacian for large kernel matting :cite:<code>he2010fast</code></p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image of shape :math:<code>h\times w \times 3</code>
+epsilons: float
+    Regularization strength, defaults to :math:<code>10^{-7}</code>
+radius: int
+    Radius of local window size, defaults to :math:<code>10</code>, i.e. only adjacent
+    pixels are considered. The size of the local window is given as
+    :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+    might lead to violated color line constraints, but also favors further
+    propagation of information within the image.
+return_diagonal: bool
+    Whether to also return the diagonal of the laplacian, defaults to True</p>
+
+<h2>Returns</h2>
+
+<p>L<em>matvec: function
+    Function that applies the Laplacian matrix to a vector
+diag</em>L: numpy.ndarray
+    Diagonal entries of the matting Laplacian, only returns if
+    <code>return_diagonal</code> is True</p>
+
+<h4><code>L_matvec(p)</code> (Line 51)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>rw_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_rw_laplacian(image, sigma, r)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>rw_laplacian(image, sigma, radius, regularization)</code> (Line 47)</h4>
+
+<p>This function implements the alpha estimator for random walk alpha matting
+as described in :cite:<code>grady2005random</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+sigma: float
+    Sigma used to calculate the weights (see Equation 4 in
+    :cite:<code>grady2005random</code>), defaults to :math:<code>0.033</code>
+radius: int
+    Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+    pixels are considered. The size of the local window is given as
+    :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+    might lead to violated color line constraints, but also favors further
+    propagation of information within the image.
+regularization: float
+    Regularization strength, defaults to :math:<code>10^{-8}</code>. Strong
+    regularization improves convergence but results in smoother alpha matte.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>uniform_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>uniform_laplacian(image, radius)</code> (Line 9)</h4>
+
+<p>This function returns a Laplacian matrix with all weights equal to one.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+radius: int
+    Radius of local window size, defaults to 1, i.e. only adjacent pixels are considered.
+   The size of the local window is given as :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes         the radius. A larger radius might lead to violated color line constraints, but also
+   favors further propagation of information within the image.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>ichol.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CholeskyDecomposition</code> (Line 148)</h4>
+
+<p>Cholesky Decomposition</p>
+
+<p>Calling this object applies the preconditioner to a vector by forward and back substitution.</p>
+
+<h2>Parameters</h2>
+
+<p>Ltuple: tuple of numpy.ndarrays
+    Tuple of array describing values, row indices and row pointers for Cholesky factor in the compressed sparse column format (csc)</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, Ltuple)</code><br />
+  <em>Line 159: No docstring</em></p>
+
+<ul>
+<li><code>L(self)</code><br />
+*Line 163: Returns the Cholesky factor</li>
+</ul>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.csc_matrix
+    Cholesky factor*</p>
+
+<ul>
+<li><code>__call__(self, b)</code><br />
+<em>Line 175: No docstring</em></li>
+</ul>
+
+<h2>File: <code>jacobi.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>jacobi(A)</code> (Line 1)</h4>
+
+<p>Compute the Jacobi preconditioner function for the matrix A.</p>
+
+<h2>Parameters</h2>
+
+<p>A: np.array
+    Input matrix to compute the Jacobi preconditioner for.</p>
+
+<h2>Returns</h2>
+
+<p>precondition_matvec: function
+    Function which applies the Jacobi preconditioner to a vector</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.array([[2, 3], [3, 5]])
+      preconditioner = jacobi(A)
+      preconditioner(np.array([1, 2]))
+      array([0.5, 0.4])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition_matvec(x)</code> (Line 28)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>vcycle.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>make_P(shape)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>jacobi_step(A, A_diag, b, x, num_iter, omega)</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_vcycle_step(A, b, shape, cache, num_pre_iter, num_post_iter, omega, direct_solve_size)</code> (Line 46)</h4>
+
+<p>No docstring</p>
+
+<h4><code>vcycle(A, shape, num_pre_iter, num_post_iter, omega, direct_solve_size, cache)</code> (Line 103)</h4>
+
+<p>Implements the V-Cycle preconditioner.
+The V-Cycle solver was recommended by :cite:<code>lee2014scalable</code> to solve the alpha matting problem.</p>
+
+<h2>Parameters</h2>
+
+<p>A: numpy.ndarray
+    Input matrix
+shape: tuple of ints
+    Describing the height and width of the image
+num<em>pre</em>iter: int
+    Number of Jacobi iterations before each V-Cycle, defaults to 1
+num<em>post</em>iter: int
+    Number of Jacobi iterations after each V-Cycle, defaults to 1
+omega: float
+    Weight parameter for the Jacobi method. If method fails to converge, try different values.</p>
+
+<h2>Returns</h2>
+
+<p>precondition: function
+    Function which applies the V-Cycle preconditioner to a vector</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      from scipy.sparse import csc_matrix
+      A = np.array([[2, 3], [3, 5]])
+      preconditioner = vcycle(A, (2, 2))
+      preconditioner(np.array([1, 2]))
+      array([-1.,  1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition(r)</code> (Line 148)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>callback.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CounterCallback</code> (Line 1)</h4>
+
+<p>Callback to count number of iterations of iterative solvers.</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 4: No docstring</em></p>
+
+<ul>
+<li><code>__call__(self, A, x, b, norm_b, r, norm_r)</code><br />
+<em>Line 7: No docstring</em></li>
+</ul>
+
+<h4><code>ProgressCallback</code> (Line 11)</h4>
+
+<p>Callback to count number of iterations of iterative solvers.
+Also prints residual error.</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 17: No docstring</em></p>
+
+<ul>
+<li><code>__call__(self, A, x, b, norm_b, r, norm_r)</code><br />
+<em>Line 20: No docstring</em></li>
+</ul>
+
+<h2>File: <code>cg.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>cg(A, b, x0, atol, rtol, maxiter, callback, M, reorthogonalize)</code> (Line 4)</h4>
+
+<p>Solves a system of linear equations :math:<code>Ax=b</code> using conjugate gradient descent :cite:<code>hestenes1952methods</code></p>
+
+<h2>Parameters</h2>
+
+<p>A: scipy.sparse.csr<em>matrix
+   Square matrix
+b: numpy.ndarray
+   Vector describing the right-hand side of the system
+x0: numpy.ndarray
+   Initialization, if <code>None</code> then :code:<code>x=np.zeros_like(b)</code>
+atol: float
+   Absolute tolerance. The loop terminates if the :math:<code>||r||</code> is smaller than <code>atol</code>, where :math:<code>r</code> denotes the residual of the current iterate.
+rtol: float
+   Relative tolerance. The loop terminates if :math:<code>{||r||}/{||b||}</code> is smaller than <code>rtol</code>, where :math:<code>r</code> denotes the residual of the current iterate.
+callback: function
+   Function :code:<code>callback(A, x, b, norm_b, r, norm_r)</code> called after each iteration, defaults to <code>None</code>
+M: function or scipy.sparse.csr</em>matrix
+   Function that applies the preconditioner to a vector. Alternatively, <code>M</code> can be a matrix describing the precondioner.
+reorthogonalize: boolean
+    Whether to apply reorthogonalization of the residuals after each update, defaults to <code>False</code></p>
+
+<h2>Returns</h2>
+
+<p>x: numpy.ndarray
+    Solution of the system</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.array([[3.0, 1.0], [1.0, 2.0]])
+      M = jacobi(A)
+      b = np.array([4.0, 3.0])
+      cg(A, b, M=M)
+      array([1., 1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition(x)</code> (Line 54)</h4>
+
+<p>No docstring</p>
+
+<h4><code>precondition(x)</code> (Line 61)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>boxfilter.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>boxfilter_rows_valid(src, r)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter_rows_same(src, r)</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter_rows_full(src, r)</code> (Line 61)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter(src, radius, mode)</code> (Line 90)</h4>
+
+<p>Computes the boxfilter (uniform blur, i.e. blur with kernel :code:<code>np.ones(radius, radius)</code>) of an input image.</p>
+
+<p>Depending on the mode, the input image of size :math:<code>(h, w)</code> is either of shape</p>
+
+<ul>
+<li>:math:<code>(h - 2 r, w - 2 r)</code> in case of 'valid' mode</li>
+<li>:math:<code>(h, w)</code> in case of 'same' mode</li>
+<li>:math:<code>(h + 2 r, w + 2 r)</code> in case of 'full' mode</li>
+</ul>
+
+<p>.. image:: figures/padding.png</p>
+
+<h2>Parameters</h2>
+
+<p>src: numpy.ndarray
+    Input image having either shape :math:<code>h \times w \times d</code>  or :math:<code>h \times w</code>
+radius: int
+    Radius of boxfilter, defaults to :math:<code>3</code>
+mode: str
+    One of 'valid', 'same' or 'full', defaults to 'same'</p>
+
+<h2>Returns</h2>
+
+<p>dst: numpy.ndarray
+    Blurred image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      boxfilter(np.eye(5), radius=2, mode="valid")
+      array([[5.]])
+      boxfilter(np.eye(5), radius=2, mode="same")
+      array([[3., 3., 3., 2., 1.],
+             [3., 4., 4., 3., 2.],
+             [3., 4., 5., 4., 3.],
+             [2., 3., 4., 4., 3.],
+             [1., 2., 3., 3., 3.]])
+      boxfilter(np.eye(5), radius=2, mode="full")
+      array([[1., 1., 1., 1., 1., 0., 0., 0., 0.],
+             [1., 2., 2., 2., 2., 1., 0., 0., 0.],
+             [1., 2., 3., 3., 3., 2., 1., 0., 0.],
+             [1., 2., 3., 4., 4., 3., 2., 1., 0.],
+             [1., 2., 3., 4., 5., 4., 3., 2., 1.],
+             [0., 1., 2., 3., 4., 4., 3., 2., 1.],
+             [0., 0., 1., 2., 3., 3., 3., 2., 1.],
+             [0., 0., 0., 1., 2., 2., 2., 2., 1.],
+             [0., 0., 0., 0., 1., 1., 1., 1., 1.]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>distance.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_propagate_1d_first_pass(d)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_propagate_1d(d, v, z, f)</code> (Line 18)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_propagate_distance(distance)</code> (Line 62)</h4>
+
+<p>No docstring</p>
+
+<h4><code>distance_transform(mask)</code> (Line 76)</h4>
+
+<p>For every non-zero value, compute the distance to the closest zero value.
+Based on :cite:<code>felzenszwalb2012distance</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>mask: numpy.ndarray
+    2D matrix of zero and nonzero values.</p>
+
+<h2>Returns</h2>
+
+<p>distance: numpy.ndarray
+    Distance to closest zero-valued pixel.</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      mask = np.random.rand(10, 20) &lt; 0.9
+      distance = distance_transform(mask)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>kdtree.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>KDTree</code> (Line 236)</h4>
+
+<p>KDTree implementation</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, data_points, min_leaf_size)</code><br />
+  *Line 239: Constructs a KDTree for given data points. The implementation currently only supports data type <code>np.float32</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>data<em>points: numpy.ndarray (of type <code>np.float32</code>)
+    Dataset with shape :math:<code>n \times d</code>, where :math:<code>n</code> is the number of data points in the data set and :math:<code>d</code> is the dimension of each data point
+min</em>leaf_size: int
+    Minimum number of nodes in a leaf, defaults to 8</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      data<em>set = np.random.randn(100, 2)
+      tree = KDTree(data</em>set.astype(np.float32))*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<ul>
+<li><code>query(self, query_points, k)</code><br />
+*Line 285: Query the tree</li>
+</ul>
+
+<h2>Parameters</h2>
+
+<p>query_points: numpy.ndarray (of type <code>np.float32</code>)
+    Data points for which the next neighbours should be calculated
+k: int
+    Number of neighbors to find</p>
+
+<h2>Returns</h2>
+
+<p>distances: numpy.ndarray
+    Distances to the neighbors
+indices: numpy.ndarray
+    Indices of the k nearest neighbors in original data array</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      data<em>set = np.random.randn(100, 2)
+      tree = KDTree(data</em>set.astype(np.float32))
+      tree.query(np.array([[0.5,0.5]], dtype=np.float32), k=3)
+      (array([[0.14234178, 0.15879704, 0.26760164]], dtype=float32), array([[29, 21, 20]]))*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>timer.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Timer</code> (Line 4)</h4>
+
+<p>Timer for benchmarking</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 7: Starts a timer</em></p>
+
+<ul>
+<li><code>stop(self, message)</code><br />
+*Line 12: Return and print time since last stop-call or initialization.
+Also print elapsed time if message is provided.</li>
+</ul>
+
+<h2>Parameters</h2>
+
+<p>message: str
+    Message to print in front of passed seconds</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      t = Timer()
+      t.stop()
+      2.6157200919999966
+      t = Timer()
+      t.stop('Test')
+      Test  - 11.654551 seconds
+      11.654551381000001*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>util.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>apply_to_channels(single_channel_func)</code> (Line 9)</h4>
+
+<p>Creates a new function which operates on each channel</p>
+
+<h2>Parameters</h2>
+
+<p>single<em>channel</em>func: function
+    Function that acts on a single color channel</p>
+
+<h2>Returns</h2>
+
+<p>channel_func: function
+    The same function that operates on all color channels</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      from scipy.signal import convolve2d
+      single<em>channel</em>fun = lambda x: convolve2d(x, np.ones((3, 3)), 'valid')
+      multi<em>channel</em>fun = apply<em>to</em>channels(single<em>channel</em>fun)
+      I = np.random.rand(480, 320, 3)
+      multi<em>channel</em>fun(I).shape
+      (478, 318, 3)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>vec_vec_dot(a, b)</code> (Line 55)</h4>
+
+<p>Computes the dot product of two vectors.</p>
+
+<h2>Parameters</h2>
+
+<p>a: numpy.ndarray
+    First vector (if np.ndim(a) &gt; 1 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Second vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: scalar
+    Dot product of <code>a</code> and <code>b</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      a = np.ones(2)
+      b = np.ones(2)
+      vec<em>vec</em>dot(a,b)
+      2.0</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>mat_vec_dot(A, b)</code> (Line 82)</h4>
+
+<p>Calculates the matrix vector product for two arrays.</p>
+
+<h2>Parameters</h2>
+
+<p>A: numpy.ndarray
+    Matrix (if np.ndim(A) &gt; 2 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: numpy.ndarray
+    Matrix vector product of both arrays</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      A = np.eye(2)
+      b = np.ones(2)
+      mat<em>vec</em>dot(A,b)
+      array([1., 1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>vec_vec_outer(a, b)</code> (Line 109)</h4>
+
+<p>Computes the outer product of two vectors</p>
+
+<p>a: numpy.ndarray
+    First vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Second vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: numpy.ndarray
+    Outer product of <code>a</code> and <code>b</code> as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      a = np.arange(1,3)
+      b = np.arange(1,3)
+      vec<em>vec</em>outer(a,b)
+      array([[1, 2],
+             [2, 4]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>fix_trimap(trimap, lower_threshold, upper_threshold)</code> (Line 135)</h4>
+
+<p>Fixes broken trimap :math:<code>T</code> by thresholding the values</p>
+
+<p>.. math::
+    T^{\text{fixed}}<em>{ij}=
+    \begin{cases}
+        0,&amp;\text{if } T</em>{ij}&lt;\text{lower_threshold}\
+        1,&amp;\text{if }T_{ij}&gt;\text{upper_threshold}\
+        0.5, &amp;\text{otherwise}.\
+    \end{cases}</p>
+
+<h2>Parameters</h2>
+
+<p>trimap: numpy.ndarray
+    Possibly broken trimap
+lower<em>threshold: float
+    Threshold used to determine background pixels, defaults to 0.1
+upper</em>threshold: float
+    Threshold used to determine foreground pixels, defaults to 0.9</p>
+
+<h2>Returns</h2>
+
+<p>fixed_trimap: numpy.ndarray
+    Trimap having values in :math:<code>\{0, 0.5, 1\}</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      trimap = np.array([0,0.1, 0.4, 0.9, 1])
+      fix_trimap(trimap, 0.2, 0.8)
+      array([0. , 0. , 0.5, 1. , 1. ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>isiterable(obj)</code> (Line 186)</h4>
+
+<p>Checks if an object is iterable</p>
+
+<h2>Parameters</h2>
+
+<p>obj: object
+    Object to check</p>
+
+<h2>Returns</h2>
+
+<p>is_iterable: bool
+    Boolean variable indicating whether the object is iterable</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      l = []
+      isiterable(l)
+      True</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>_resize_pil_image(image, size, resample)</code> (Line 213)</h4>
+
+<p>No docstring</p>
+
+<h4><code>load_image(path, mode, size, resample)</code> (Line 232)</h4>
+
+<p>This function can be used to load an image from a file.</p>
+
+<h2>Parameters</h2>
+
+<p>path: str
+    Path of image to load.
+mode: str
+    Can be "GRAY", "RGB" or something else (see PIL.convert())</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Loaded image</p>
+
+<h4><code>save_image(path, image, make_directory)</code> (Line 263)</h4>
+
+<p>Given a path, save an image there.</p>
+
+<h2>Parameters</h2>
+
+<p>path: str
+    Where to save the image.
+image: numpy.ndarray, dtype in [np.uint8, np.float32, np.float64]
+    Image to save.
+    Images of float dtypes should be in range [0, 1].
+    Images of uint8 dtype should be in range [0, 255]
+make_directory: bool
+    Whether to create the directories needed for the image path.</p>
+
+<h4><code>to_rgb8(image)</code> (Line 290)</h4>
+
+<p>Convertes an image to rgb8 color space</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image to convert</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Converted image with same height and width as input image but with three color channels</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      I = np.eye(2)
+      to_rgb8(I)
+      array([[[255, 255, 255],
+              [  0,   0,   0]],
+             [[  0,   0,   0],
+              [255, 255, 255]]], dtype=uint8)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>make_grid(images, nx, ny, dtype)</code> (Line 334)</h4>
+
+<p>Plots a grid of images.</p>
+
+<h2>Parameters</h2>
+
+<p>images : list of numpy.ndarray
+    List of images to plot
+nx: int
+    Number of rows
+ny: int
+    Number of columns
+dtype: type
+    Data type of output array</p>
+
+<h2>Returns</h2>
+
+<p>grid: numpy.ndarray
+   Grid of images with datatype <code>dtype</code></p>
+
+<h4><code>show_images(images)</code> (Line 421)</h4>
+
+<p>Plot grid of images.</p>
+
+<h2>Parameters</h2>
+
+<p>images : list of numpy.ndarray
+    List of images to plot
+height : int, matrix
+    Height in pixels the output grid, defaults to 512</p>
+
+<h4><code>trimap_split(trimap, flatten, bg_threshold, fg_threshold)</code> (Line 439)</h4>
+
+<p>This function splits the trimap into foreground pixels, background pixels, and unknown pixels.</p>
+
+<p>Foreground pixels are pixels where the trimap has values larger than or equal to <code>fg_threshold</code> (default: 0.9).
+Background pixels are pixels where the trimap has values smaller than or equal to <code>bg_threshold</code> (default: 0.1).
+Pixels with other values are assumed to be unknown.</p>
+
+<h2>Parameters</h2>
+
+<p>trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times w</code>
+flatten: bool
+    If true np.flatten is called on the trimap</p>
+
+<h2>Returns</h2>
+
+<p>is<em>fg: numpy.ndarray
+    Boolean array indicating which pixel belongs to the foreground
+is</em>bg: numpy.ndarray
+    Boolean array indicating which pixel belongs to the background
+is<em>known: numpy.ndarray
+    Boolean array indicating which pixel is known
+is</em>unknown: numpy.ndarray
+    Boolean array indicating which pixel is unknown
+bg<em>threshold: float
+    Pixels with smaller trimap values will be considered background.
+fg</em>threshold: float
+    Pixels with larger trimap values will be considered foreground.</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      trimap = np.array([[1,0],[0.5,0.2]])
+      is<em>fg, is</em>bg, is<em>known, is</em>unknown = trimap<em>split(trimap)
+      is</em>fg
+      array([ True, False, False, False])
+      is<em>bg
+      array([False,  True, False, False])
+      is</em>known
+      array([ True,  True, False, False])
+      is_unknown
+      array([False, False,  True,  True])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>sanity_check_image(image)</code> (Line 528)</h4>
+
+<p>Performs a sanity check for input images. Image values should be in the
+range [0, 1], the <code>dtype</code> should be <code>np.float32</code> or <code>np.float64</code> and the
+image shape should be <code>(?, ?, 3)</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times w \times 3</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import check<em>image
+      image = (np.random.randn(64, 64, 2) * 255).astype(np.int32)
+      sanity</em>check_image(image)
+      <strong>main</strong>:1: UserWarning: Expected RGB image of shape (?, ?, 3), but image.shape is (64, 64, 2).
+      <strong>main</strong>:1: UserWarning: Image values should be in [0, 1], but image.min() is -933.
+      <strong>main</strong>:1: UserWarning: Image values should be in [0, 1], but image.max() is 999.
+      <strong>main</strong>:1: UserWarning: Unexpected image.dtype int32. Are you sure that you do not want to use np.float32 or np.float64 instead?</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>blend(foreground, background, alpha)</code> (Line 581)</h4>
+
+<p>This function composes a new image for given foreground image, background image and alpha matte.</p>
+
+<p>This is done by applying the composition equation</p>
+
+<p>.. math::
+    I = \alpha F + (1-\alpha)B.</p>
+
+<h2>Parameters</h2>
+
+<p>foreground: numpy.ndarray
+    Foreground image
+background: numpy.ndarray
+    Background image
+alpha: numpy.ndarray
+    Alpha matte</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Composed image as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      foreground = load<em>image("data/lemur/lemur</em>foreground.png", "RGB")
+      background = load<em>image("data/lemur/beach.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur_alpha.png", "GRAY")
+      I = blend(foreground, background, alpha)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>stack_images()</code> (Line 617)</h4>
+
+<p>This function stacks images along the third axis.
+This is useful for combining e.g. rgb color channels or color and alpha channels.</p>
+
+<h2>Parameters</h2>
+
+<p>*images: numpy.ndarray
+    Images to be stacked.</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Stacked images as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting.util.util import stack<em>images
+      import numpy as np
+      I = stack</em>images(np.random.rand(4,5,3), np.random.rand(4,5,3))
+      I.shape
+      (4, 5, 6)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>row_sum(A)</code> (Line 646)</h4>
+
+<p>Calculate the sum of each row of a matrix</p>
+
+<h2>Parameters</h2>
+
+<p>A: np.ndarray or scipy.sparse.spmatrix
+    Matrix to sum rows of</p>
+
+<h2>Returns</h2>
+
+<p>row_sums: np.ndarray
+    Vector of summed rows</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.random.rand(2,2)
+      A
+      array([[0.62750946, 0.12917617],
+             [0.8599449 , 0.5777254 ]])
+      row_sum(A)
+      array([0.75668563, 1.4376703 ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>normalize_rows(A, threshold)</code> (Line 675)</h4>
+
+<p>Normalize the rows of a matrix</p>
+
+<p>Rows with sum below threshold are left as-is.</p>
+
+<h2>Parameters</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix to normalize
+threshold: float
+    Threshold to avoid division by zero</p>
+
+<h2>Returns</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix with normalized rows</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.arange(4).reshape(2,2)
+      normalize_rows(A)
+      array([[0. , 1. ],
+             [0.4, 0.6]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>grid_coordinates(width, height, flatten)</code> (Line 715)</h4>
+
+<p>Calculates image pixel coordinates for an image with a specified shape</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+flatten: bool
+    Whether the array containing the coordinates should be flattened or not, defaults to False</p>
+
+<h2>Returns</h2>
+
+<p>x: numpy.ndarray
+    x coordinates
+y: numpy.ndarray
+    y coordinates</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      x, y = grid_coordinates(2,2)
+      x
+      array([[0, 1],
+             [0, 1]])
+      y
+      array([[0, 0],
+             [1, 1]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>sparse_conv_matrix_with_offsets(width, height, kernel, dx, dy)</code> (Line 757)</h4>
+
+<p>Calculates a convolution matrix that can be applied to a vectorized image</p>
+
+<p>Additionally, this function allows to specify which pixels should be used for the convoltion, i.e.</p>
+
+<p>.. math:: \left(I * K\right)<em>{ij} = \sum</em>k K<em>k I</em>{i+{\Delta<em>y}</em>k,j+{\Delta<em>y}</em>k},</p>
+
+<p>where :math:<code>K</code> is the flattened convolution kernel.</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+kernel: numpy.ndarray
+    Convolutional kernel
+dx: numpy.ndarray
+    Offset in x direction
+dy: nunpy.ndarray
+    Offset in y direction</p>
+
+<h2>Returns</h2>
+
+<p>M: scipy.sparse.csr_matrix
+    Convolution matrix</p>
+
+<h4><code>sparse_conv_matrix(width, height, kernel)</code> (Line 807)</h4>
+
+<p>Calculates a convolution matrix that can be applied to a vectorized image</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+kernel: numpy.ndarray
+    Convolutional kernel</p>
+
+<h2>Returns</h2>
+
+<p>M: scipy.sparse.csr_matrix
+    Convolution matrix</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      sparse<em>conv</em>matrix(3,3,np.ones((3,3)))
+      &lt;9x9 sparse matrix of type '<class 'numpy.float64'>'
+      with 49 stored elements in Compressed Sparse Row format></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>weights_to_laplacian(W, normalize, regularization)</code> (Line 840)</h4>
+
+<p>Calculates the random walk normalized Laplacian matrix from the weight matrix</p>
+
+<h2>Parameters</h2>
+
+<p>W: numpy.ndarray
+    Array of weights
+normalize: bool
+    Whether the rows of W should be normalized to 1, defaults to True
+regularization: float
+    Regularization strength, defaults to 0, i.e. no regularizaion</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Laplacian matrix</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      weights<em>to</em>laplacian(np.ones((4,4)))
+      matrix([[ 0.75, -0.25, -0.25, -0.25],
+              [-0.25,  0.75, -0.25, -0.25],
+              [-0.25, -0.25,  0.75, -0.25],
+              [-0.25, -0.25, -0.25,  0.75]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>normalize(values)</code> (Line 878)</h4>
+
+<p>Normalizes an array such that all values are between 0 and 1</p>
+
+<h2>Parameters</h2>
+
+<p>values: numpy.ndarray
+    Array to normalize</p>
+
+<h2>Returns</h2>
+
+<p>result: numpy.ndarray
+    Normalized array</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      normalize(np.array([0, 1, 3, 10]))
+      array([0. , 0.1, 0.3, 1. ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>div_round_up(x, n)</code> (Line 904)</h4>
+
+<p>Divides a number x by another integer n and rounds up the result</p>
+
+<h2>Parameters</h2>
+
+<p>x: int
+    Numerator
+n: int
+    Denominator</p>
+
+<h2>Returns</h2>
+
+<p>result: int
+    Result</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      div<em>round</em>up(3,2)
+      2</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>remove_background_bicolor(image, fg_color, bg_color)</code> (Line 928)</h4>
+
+<p>Remove background from image with at most two colors.
+Might not work if image has more than two colors.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    RGB input image
+fg<em>color: numpy.ndarray
+    RGB Foreground color
+bg</em>color: numpy.ndarray
+    RGB Background color</p>
+
+<h2>Returns</h2>
+
+<p>output: numpy.ndarray
+    RGBA output image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      image = np.random.rand(480, 320, 3)
+      fg<em>color = np.random.rand(3)
+      bg</em>color = np.random.rand(3)
+      output = remove<em>background</em>bicolor(image, fg<em>color, bg</em>color)
+      print(output.shape)
+      (480, 320, 4)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>multi_channel_func(image)</code> (Line 35)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>build.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>generate_html(node, references, html)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 157)</h4>
+
+<p>No docstring</p>
+
+<h4><code>write_website(html_path, title, content)</code> (Line 226)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>highlight.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>group(x)</code> (Line 3)</h4>
+
+<p>No docstring</p>
+
+<h4><code>non_capturing_group(x)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>named_group(name, x)</code> (Line 9)</h4>
+
+<p>No docstring</p>
+
+<h4><code>opt(x)</code> (Line 12)</h4>
+
+<p>No docstring</p>
+
+<h4><code>any_of()</code> (Line 15)</h4>
+
+<p>No docstring</p>
+
+<h4><code>escape(x)</code> (Line 18)</h4>
+
+<p>No docstring</p>
+
+<h4><code>indentation(line)</code> (Line 66)</h4>
+
+<p>No docstring</p>
+
+<h4><code>remove_too_much_identation(code)</code> (Line 69)</h4>
+
+<p>No docstring</p>
+
+<h4><code>highlight(code, output)</code> (Line 75)</h4>
+
+<p>No docstring</p>
+
+<h4><code>highlight_inline(code)</code> (Line 83)</h4>
+
+<p>No docstring</p>
+
+<h4><code>highlight_block(code)</code> (Line 90)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>parse_bib.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>parse_bib(text)</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 156)</h4>
+
+<p>No docstring</p>
+
+<h4><code>replace(match)</code> (Line 71)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>parse_markdown.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Stream</code> (Line 4)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, text)</code><br />
+  <em>Line 5: No docstring</em></p>
+
+<ul>
+<li><p><code>peek(self, n)</code><br />
+<em>Line 9: No docstring</em></p></li>
+<li><p><code>consume(self, n)</code><br />
+<em>Line 12: No docstring</em></p></li>
+<li><p><code>available(self)</code><br />
+<em>Line 17: No docstring</em></p></li>
+<li><p><code>skip(self, n)</code><br />
+<em>Line 20: No docstring</em></p></li>
+<li><p><code>__bool__(self)</code><br />
+<em>Line 24: No docstring</em></p></li>
+<li><p><code>match(self, pattern, flags)</code><br />
+<em>Line 27: No docstring</em></p></li>
+<li><p><code>match_consume(self, pattern, flags)</code><br />
+<em>Line 31: No docstring</em></p></li>
+</ul>
+
+<h2>File: <code>util.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>HTML</code> (Line 22)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, value)</code><br />
+  <em>Line 23: No docstring</em></p>
+
+<ul>
+<li><code>__str__(self)</code><br />
+<em>Line 26: No docstring</em></li>
+</ul>
+
+<h2>File: <code>make_frames.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>FrameWriterCallback</code> (Line 10)</h4>
+
+<p>No docstring</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 11: No docstring</em></p>
+
+<ul>
+<li><code>__call__(self, A, x, b, norm_b, r, norm_r)</code><br />
+<em>Line 14: No docstring</em></li>
+</ul>
+
+<h2>File: <code>advanced_example.py</code></h2>
+
+<h2>File: <code>expert_example.py</code></h2>
+
+<h2>File: <code>lemur_at_the_beach.py</code></h2>
+
+<h2>File: <code>simple_example.py</code></h2>
+
+<h2>File: <code>__about__.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>estimate_alpha_cf.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_cf(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Closed-Form Alpha Matting as proposed by :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: ichol)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>cf_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver
+is_known: numpy.ndarray
+    Binary mask of pixels for which to compute the laplacian matrix.
+    Providing this parameter might improve performance if few pixels are unknown.</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>cf(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_knn.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_knn(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using KNN Matting similar to :cite:<code>chen2013knn</code>.
+See <code>knn_laplacian</code> for more details.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: jacobi)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>knn_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>knn(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"n<em>neighbors": [15, 10]},
+      ...     cg</em>kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_lbdm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_lbdm(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Learning Based Digital Matting as proposed by :cite:<code>zheng2009learning</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: ichol)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>lbdm_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>lbdm(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_lkm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_lkm(image, trimap, laplacian_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimate alpha from an input image and an input trimap as described in Fast Matting Using Large Kernel Matting Laplacian Matrices by :cite:<code>he2010fast</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>lkm_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>lkm(
+      ...     image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"epsilon": 1e-6, "radius": 15},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>A_matvec(x)</code> (Line 54)</h4>
+
+<p>No docstring</p>
+
+<h4><code>jacobi(x)</code> (Line 57)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>estimate_alpha_rw.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_rw(image, trimap, preconditioner, laplacian_kwargs, cg_kwargs)</code> (Line 9)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Learning Based Digital Matting as proposed by :cite:<code>grady2005random</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+preconditioner: function or scipy.sparse.linalg.LinearOperator
+    Function or sparse matrix that applies the preconditioner to a vector (default: jacobi)
+laplacian<em>kwargs: dictionary
+    Arguments passed to the :code:<code>rw_laplacian</code> function
+cg</em>kwargs: dictionary
+    Arguments passed to the :code:<code>cg</code> solver</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha = estimate</em>alpha<em>rw(
+      ....    image,
+      ...     trimap,
+      ...     laplacian</em>kwargs={"sigma": 0.03},
+      ...     cg_kwargs={"maxiter":2000})</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>estimate_alpha_sm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_alpha_sm(image, trimap, return_foreground_background, trimap_expansion_radius, trimap_expansion_threshold, sample_gathering_angles, sample_gathering_weights, sample_gathering_Np_radius, sample_refinement_radius, local_smoothing_radius1, local_smoothing_radius2, local_smoothing_radius3, local_smoothing_sigma_sq1, local_smoothing_sigma_sq2, local_smoothing_sigma_sq3)</code> (Line 4)</h4>
+
+<p>Estimate alpha from an input image and an input trimap using Shared Matting as proposed by :cite:<code>GastalOliveira2010SharedMatting</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times  w \times d</code> for which the alpha matte should be estimated
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times  w</code> of the image
+return<em>foreground</em>background: numpy.ndarray
+    Whether to return foreground and background estimate. They will be computed either way
+trimap<em>expansion</em>radius: int
+    How much to expand trimap.
+trimap<em>expansion</em>threshold: float
+    Which pixel colors are similar enough to expand trimap into
+sample<em>gathering</em>angles: int
+    In how many directions to search for new samples.
+sample<em>gathering</em>weights: Tuple[float, float, float, float]
+    Weights for various cost functions
+sample<em>gathering</em>Np<em>radius: int
+    Radius of Np function
+sample</em>refinement<em>radius: int
+    Search region for better neighboring samples
+local</em>smoothing<em>radius1: int
+    Radius for foreground/background smoothing
+local</em>smoothing<em>radius2: int
+    Radius for confidence computation
+local</em>smoothing<em>radius3: int
+    Radius for low frequency alpha computation
+local</em>smoothing<em>sigma</em>sq1: float
+    Squared sigma value for foreground/background smoothing
+    Defaults to :code:<code>(2 * local_smoothing_radius1 + 1)**2 / (9 * pi)</code> if not given
+local<em>smoothing</em>sigma<em>sq2: float
+    Squared sigma value for confidence computation
+local</em>smoothing<em>sigma</em>sq3: float
+    Squared sigma value for low frequency alpha computation
+    Defaults to :code:<code>(2 * local_smoothing_radius3 + 1)**2 / (9 * pi)</code> if not given</p>
+
+<h2>Returns</h2>
+
+<p>alpha: numpy.ndarray
+    Estimated alpha matte
+foreground: numpy.ndarray
+    Estimated foreground
+background: numpy.ndarray
+    Estimated background</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      trimap = load</em>image("data/lemur/lemur<em>trimap.png", "GRAY")
+      alpha, foreground, background = estimate</em>alpha<em>sm(
+      ...     image,
+      ...     trimap,
+      ...     return</em>foreground<em>background=True,
+      ...     sample</em>gathering_angles=4)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>estimate_alpha(I, F, B)</code> (Line 168)</h4>
+
+<p>No docstring</p>
+
+<h4><code>inner(a, b)</code> (Line 186)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Mp2(I, F, B)</code> (Line 193)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Np(image, x, y, F, B, r)</code> (Line 203)</h4>
+
+<p>No docstring</p>
+
+<h4><code>Ep(image, px, py, sx, sy)</code> (Line 214)</h4>
+
+<p>No docstring</p>
+
+<h4><code>dist(a, b)</code> (Line 260)</h4>
+
+<p>No docstring</p>
+
+<h4><code>length(a)</code> (Line 267)</h4>
+
+<p>No docstring</p>
+
+<h4><code>expand_trimap(expanded_trimap, trimap, image, k_i, k_c)</code> (Line 271)</h4>
+
+<p>No docstring</p>
+
+<h4><code>sample_gathering(gathering_F, gathering_B, gathering_alpha, image, trimap, num_angles, eN, eA, ef, eb, Np_radius)</code> (Line 302)</h4>
+
+<p>No docstring</p>
+
+<h4><code>sample_refinement(refined_F, refined_B, refined_alpha, gathering_F, gathering_B, image, trimap, radius)</code> (Line 433)</h4>
+
+<p>No docstring</p>
+
+<h4><code>local_smoothing(final_F, final_B, final_alpha, refined_F, refined_B, refined_alpha, image, trimap, radius1, radius2, radius3, sigma_sq1, sigma_sq2, sigma_sq3)</code> (Line 488)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>cutout.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>cutout(image_path, trimap_path, cutout_path)</code> (Line 6)</h4>
+
+<p>Generate a cutout image from an input image and an input trimap.
+This method is using closed-form alpha matting as proposed by :cite:<code>levin2007closed</code> and multi-level foreground extraction :cite:<code>germer2020multilevel</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image<em>path: str
+    Path of input image
+trimap</em>path: str
+    Path of input trimap
+cutout_path: str
+    Path of output cutout image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>cutout("../data/lemur.png", "../data/lemur<em>trimap.png", "lemur</em>cutout.png")</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>estimate_foreground_cf.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_cf(image, alpha, regularization, rtol, neighbors, return_background, foreground_guess, background_guess, ichol_kwargs, cg_kwargs)</code> (Line 8)</h4>
+
+<p>Estimates the foreground of an image given alpha matte and image.</p>
+
+<p>This method is based on the publication :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Input image with shape :math:<code>h \times  w \times d</code>
+alpha: numpy.ndarray
+    Input alpha matte with shape :math:<code>h \times  w</code>
+regularization: float
+    Regularization strength :math:<code>\epsilon</code>, defaults to :math:<code>10^{-5}</code>
+neighbors: list of tuples of ints
+    List of relative positions that define the neighborhood of a pixel
+return<em>background: bool
+    Whether to return the estimated background in addition to the foreground
+foreground</em>guess: numpy.ndarray
+    An initial guess for the foreground image in order to accelerate convergence.
+    Using input image by default.
+background<em>guess: numpy.ndarray
+    An initial guess for the background image.
+    Using input image by default.
+ichol</em>kwargs: dictionary
+    Keyword arguments for the incomplete Cholesky preconditioner
+cg_kwargs: dictionary
+    Keyword arguments for the conjugate gradient descent solver</p>
+
+<h2>Returns</h2>
+
+<p>F: numpy.ndarray
+    Extracted foreground
+B: numpy.ndarray
+    Extracted background (not returned by default)</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur<em>alpha.png", "GRAY")
+      F = estimate</em>foreground<em>cf(image, alpha, return</em>background=False)
+      F, B = estimate<em>foreground</em>cf(image, alpha, return_background=True)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>See Also</h2>
+
+<p>stack_images: This function can be used to place the foreground on a new background.</p>
+
+<h2>File: <code>estimate_foreground_ml.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_resize_nearest_multichannel(dst, src)</code> (Line 6)</h4>
+
+<p>Internal method.</p>
+
+<p>Resize image src to dst using nearest neighbors filtering.
+Images must have multiple color channels, i.e. :code:<code>len(shape) == 3</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>dst: numpy.ndarray of type np.float32
+    output image
+src: numpy.ndarray of type np.float32
+    input image</p>
+
+<h4><code>_resize_nearest(dst, src)</code> (Line 33)</h4>
+
+<p>Internal method.</p>
+
+<p>Resize image src to dst using nearest neighbors filtering.
+Images must be grayscale, i.e. :code:<code>len(shape) == 3</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>dst: numpy.ndarray of type np.float32
+    output image
+src: numpy.ndarray of type np.float32
+    input image</p>
+
+<h4><code>_estimate_fb_ml(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, gradient_weight)</code> (Line 62)</h4>
+
+<p>No docstring</p>
+
+<h4><code>estimate_foreground_ml(image, alpha, regularization, n_small_iterations, n_big_iterations, small_size, return_background, gradient_weight)</code> (Line 186)</h4>
+
+<p>Estimates the foreground of an image given its alpha matte.</p>
+
+<p>See :cite:<code>germer2020multilevel</code> for reference.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Input image with shape :math:<code>h \times  w \times d</code>
+alpha: numpy.ndarray
+    Input alpha matte shape :math:<code>h \times  w</code>
+regularization: float
+    Regularization strength :math:<code>\epsilon</code>, defaults to :math:<code>10^{-5}</code>.
+    Higher regularization results in smoother colors.
+n<em>small</em>iterations: int
+    Number of iterations performed on small scale, defaults to :math:<code>10</code>
+n<em>big</em>iterations: int
+    Number of iterations performed on large scale, defaults to :math:<code>2</code>
+small<em>size: int
+    Threshold that determines at which size <code>n_small_iterations</code> should be used
+return</em>background: bool
+    Whether to return the estimated background in addition to the foreground
+gradient_weight: float
+    Larger values enforce smoother foregrounds, defaults to :math:<code>1</code></p>
+
+<h2>Returns</h2>
+
+<p>F: numpy.ndarray
+    Extracted foreground
+B: numpy.ndarray
+    Extracted background</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      image = load<em>image("data/lemur/lemur.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur<em>alpha.png", "GRAY")
+      F = estimate</em>foreground<em>ml(image, alpha, return</em>background=False)
+      F, B = estimate<em>foreground</em>ml(image, alpha, return_background=True)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>See Also</h2>
+
+<p>stack_images: This function can be used to place the foreground on a new background.</p>
+
+<h2>File: <code>estimate_foreground_ml_cupy.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_ml_cupy(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, block_size, return_background, to_numpy)</code> (Line 110)</h4>
+
+<p>See the :code:<code>estimate_foreground</code> method for documentation.</p>
+
+<h4><code>resize_nearest(dst, src, w_src, h_src, w_dst, h_dst, depth)</code> (Line 152)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>estimate_foreground_ml_pyopencl.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>estimate_foreground_ml_pyopencl(input_image, input_alpha, regularization, n_small_iterations, n_big_iterations, small_size, return_background)</code> (Line 104)</h4>
+
+<p>See the :code:<code>estimate_foreground</code> method for documentation.</p>
+
+<h4><code>upload(array)</code> (Line 115)</h4>
+
+<p>No docstring</p>
+
+<h4><code>alloc()</code> (Line 123)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download(device_buf, shape)</code> (Line 127)</h4>
+
+<p>No docstring</p>
+
+<h4><code>resize_nearest(dst, src, w_src, h_src, w_dst, h_dst, depth)</code> (Line 154)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>cf_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_cf_laplacian(image, epsilon, r, values, indices, indptr, is_known)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>cf_laplacian(image, epsilon, radius, is_known)</code> (Line 132)</h4>
+
+<p>This function implements the alpha estimator for closed-form alpha matting
+as proposed by :cite:<code>levin2007closed</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+   Image with shape :math:<code>h\times w \times 3</code>
+epsilon: float
+   Regularization strength, defaults to :math:<code>10^{-7}</code>. Strong
+   regularization improves convergence but results in smoother alpha mattes.
+radius: int
+   Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+   pixels are considered.
+   The size of the local window is given as :math:<code>(2 r + 1)^2</code>, where
+   :math:<code>r</code> denotes         the radius. A larger radius might lead to
+   violated color line constraints, but also
+   favors further propagation of information within the image.
+is_known: numpy.ndarray
+    Binary mask of pixels for which to compute the laplacian matrix.
+    Laplacian entries for known pixels will have undefined values.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>knn_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>knn_laplacian(image, n_neighbors, distance_weights, kernel)</code> (Line 7)</h4>
+
+<p>This function calculates the KNN matting Laplacian matrix similar to
+:cite:<code>chen2013knn</code>.
+We use a kernel of 1 instead of a soft kernel by default since the former is
+faster to compute and both produce almost identical results in all our
+experiments, which is to be expected as the soft kernel is very close to 1
+in most cases.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+n<em>neighbors: list of ints
+    Number of neighbors to consider. If :code:<code>len(n_neighbors)&gt;1</code> multiple
+    nearest neighbor calculations are done and merged, defaults to
+    <code>[20, 10]</code>, i.e. first 20 neighbors are considered and in the second run
+    :math:<code>10</code> neighbors. The pixel distances are then weighted by the
+    :code:<code>distance_weights</code>.
+distance</em>weights: list of floats
+    Weight of distance in feature vector, defaults to <code>[2.0, 0.1]</code>.
+kernel: str
+    Must be either "binary" or "soft". Default is "binary".</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian matrix</p>
+
+<h2>File: <code>laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>make_linear_system(L, trimap, lambda_value, return_c)</code> (Line 5)</h4>
+
+<p>This function constructs a linear system from a matting Laplacian by
+constraining the foreground and background pixels with a diagonal matrix
+<code>C</code> to values in the right-hand-side vector <code>b</code>. The constraints are
+weighted by a factor :math:<code>\lambda</code>. The linear system is given as</p>
+
+<p>.. math::</p>
+
+<p>A = L + \lambda C,</p>
+
+<p>where :math:<code>C=\mathop{Diag}(c)</code> having :math:<code>c_i = 1</code> if pixel i is known
+and :math:<code>c_i = 0</code> otherwise.
+The right-hand-side :math:<code>b</code> is a vector with entries :math:<code>b_i = 1</code> is
+pixel is is a foreground pixel and :math:<code>b_i = 0</code> otherwise.</p>
+
+<h2>Parameters</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Laplacian matrix, e.g. calculated with :code:<code>lbdm_laplacian</code> function
+trimap: numpy.ndarray
+    Trimap with shape :math:<code>h\times w</code>
+lambda<em>value: float
+    Constraint penalty, defaults to 100
+return</em>c: bool
+    Whether to return the constraint matrix <code>C</code>, defaults to False</p>
+
+<h2>Returns</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix describing the system of linear equations
+b: numpy.ndarray
+    Vector describing the right-hand side of the system
+C: numpy.ndarray
+    Vector describing the diagonal entries of the matrix <code>C</code>, only returned
+    if <code>return_c</code> is set to True</p>
+
+<h2>File: <code>lbdm_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>calculate_kernel_matrix(X, v)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_lbdm_laplacian(image, epsilon, r)</code> (Line 16)</h4>
+
+<p>No docstring</p>
+
+<h4><code>lbdm_laplacian(image, epsilon, radius)</code> (Line 64)</h4>
+
+<p>Calculate a Laplacian matrix based on :cite:<code>zheng2009learning</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+   Image with shape :math:<code>h\times w \times 3</code>
+epsilon: float
+   Regularization strength, defaults to :math:<code>10^{-7}</code>. Strong
+   regularization improves convergence but results in smoother alpha mattes.
+radius: int
+   Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+   pixels are considered. The size of the local window is given as
+   :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+   might lead to violated color line constraints, but also favors further
+   propagation of information within the image.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.csr_matrix
+    Matting Laplacian</p>
+
+<h2>File: <code>lkm_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>lkm_laplacian(image, epsilon, radius, return_diagonal)</code> (Line 6)</h4>
+
+<p>Calculates the Laplacian for large kernel matting :cite:<code>he2010fast</code></p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image of shape :math:<code>h\times w \times 3</code>
+epsilons: float
+    Regularization strength, defaults to :math:<code>10^{-7}</code>
+radius: int
+    Radius of local window size, defaults to :math:<code>10</code>, i.e. only adjacent
+    pixels are considered. The size of the local window is given as
+    :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+    might lead to violated color line constraints, but also favors further
+    propagation of information within the image.
+return_diagonal: bool
+    Whether to also return the diagonal of the laplacian, defaults to True</p>
+
+<h2>Returns</h2>
+
+<p>L<em>matvec: function
+    Function that applies the Laplacian matrix to a vector
+diag</em>L: numpy.ndarray
+    Diagonal entries of the matting Laplacian, only returns if
+    <code>return_diagonal</code> is True</p>
+
+<h4><code>L_matvec(p)</code> (Line 51)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>rw_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_rw_laplacian(image, sigma, r)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>rw_laplacian(image, sigma, radius, regularization)</code> (Line 47)</h4>
+
+<p>This function implements the alpha estimator for random walk alpha matting
+as described in :cite:<code>grady2005random</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+sigma: float
+    Sigma used to calculate the weights (see Equation 4 in
+    :cite:<code>grady2005random</code>), defaults to :math:<code>0.033</code>
+radius: int
+    Radius of local window size, defaults to :math:<code>1</code>, i.e. only adjacent
+    pixels are considered. The size of the local window is given as
+    :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes the radius. A larger radius
+    might lead to violated color line constraints, but also favors further
+    propagation of information within the image.
+regularization: float
+    Regularization strength, defaults to :math:<code>10^{-8}</code>. Strong
+    regularization improves convergence but results in smoother alpha matte.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>uniform_laplacian.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>uniform_laplacian(image, radius)</code> (Line 9)</h4>
+
+<p>This function returns a Laplacian matrix with all weights equal to one.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h\times w \times 3</code>
+radius: int
+    Radius of local window size, defaults to 1, i.e. only adjacent pixels are considered.
+   The size of the local window is given as :math:<code>(2 r + 1)^2</code>, where :math:<code>r</code> denotes         the radius. A larger radius might lead to violated color line constraints, but also
+   favors further propagation of information within the image.</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Matting Laplacian</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>ichol.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CholeskyDecomposition</code> (Line 148)</h4>
+
+<p>Cholesky Decomposition</p>
+
+<p>Calling this object applies the preconditioner to a vector by forward and back substitution.</p>
+
+<h2>Parameters</h2>
+
+<p>Ltuple: tuple of numpy.ndarrays
+    Tuple of array describing values, row indices and row pointers for Cholesky factor in the compressed sparse column format (csc)</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, Ltuple)</code><br />
+  <em>Line 159: No docstring</em></p>
+
+<ul>
+<li><code>L(self)</code><br />
+*Line 163: Returns the Cholesky factor</li>
+</ul>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.csc_matrix
+    Cholesky factor*</p>
+
+<ul>
+<li><code>__call__(self, b)</code><br />
+<em>Line 175: No docstring</em></li>
+</ul>
+
+<h2>File: <code>jacobi.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>jacobi(A)</code> (Line 1)</h4>
+
+<p>Compute the Jacobi preconditioner function for the matrix A.</p>
+
+<h2>Parameters</h2>
+
+<p>A: np.array
+    Input matrix to compute the Jacobi preconditioner for.</p>
+
+<h2>Returns</h2>
+
+<p>precondition_matvec: function
+    Function which applies the Jacobi preconditioner to a vector</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.array([[2, 3], [3, 5]])
+      preconditioner = jacobi(A)
+      preconditioner(np.array([1, 2]))
+      array([0.5, 0.4])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition_matvec(x)</code> (Line 28)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>vcycle.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>make_P(shape)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>jacobi_step(A, A_diag, b, x, num_iter, omega)</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_vcycle_step(A, b, shape, cache, num_pre_iter, num_post_iter, omega, direct_solve_size)</code> (Line 46)</h4>
+
+<p>No docstring</p>
+
+<h4><code>vcycle(A, shape, num_pre_iter, num_post_iter, omega, direct_solve_size, cache)</code> (Line 103)</h4>
+
+<p>Implements the V-Cycle preconditioner.
+The V-Cycle solver was recommended by :cite:<code>lee2014scalable</code> to solve the alpha matting problem.</p>
+
+<h2>Parameters</h2>
+
+<p>A: numpy.ndarray
+    Input matrix
+shape: tuple of ints
+    Describing the height and width of the image
+num<em>pre</em>iter: int
+    Number of Jacobi iterations before each V-Cycle, defaults to 1
+num<em>post</em>iter: int
+    Number of Jacobi iterations after each V-Cycle, defaults to 1
+omega: float
+    Weight parameter for the Jacobi method. If method fails to converge, try different values.</p>
+
+<h2>Returns</h2>
+
+<p>precondition: function
+    Function which applies the V-Cycle preconditioner to a vector</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      from scipy.sparse import csc_matrix
+      A = np.array([[2, 3], [3, 5]])
+      preconditioner = vcycle(A, (2, 2))
+      preconditioner(np.array([1, 2]))
+      array([-1.,  1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition(r)</code> (Line 148)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>callback.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>CounterCallback</code> (Line 1)</h4>
+
+<p>Callback to count number of iterations of iterative solvers.</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 4: No docstring</em></p>
+
+<ul>
+<li><code>__call__(self, A, x, b, norm_b, r, norm_r)</code><br />
+<em>Line 7: No docstring</em></li>
+</ul>
+
+<h4><code>ProgressCallback</code> (Line 11)</h4>
+
+<p>Callback to count number of iterations of iterative solvers.
+Also prints residual error.</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 17: No docstring</em></p>
+
+<ul>
+<li><code>__call__(self, A, x, b, norm_b, r, norm_r)</code><br />
+<em>Line 20: No docstring</em></li>
+</ul>
+
+<h2>File: <code>cg.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>cg(A, b, x0, atol, rtol, maxiter, callback, M, reorthogonalize)</code> (Line 4)</h4>
+
+<p>Solves a system of linear equations :math:<code>Ax=b</code> using conjugate gradient descent :cite:<code>hestenes1952methods</code></p>
+
+<h2>Parameters</h2>
+
+<p>A: scipy.sparse.csr<em>matrix
+   Square matrix
+b: numpy.ndarray
+   Vector describing the right-hand side of the system
+x0: numpy.ndarray
+   Initialization, if <code>None</code> then :code:<code>x=np.zeros_like(b)</code>
+atol: float
+   Absolute tolerance. The loop terminates if the :math:<code>||r||</code> is smaller than <code>atol</code>, where :math:<code>r</code> denotes the residual of the current iterate.
+rtol: float
+   Relative tolerance. The loop terminates if :math:<code>{||r||}/{||b||}</code> is smaller than <code>rtol</code>, where :math:<code>r</code> denotes the residual of the current iterate.
+callback: function
+   Function :code:<code>callback(A, x, b, norm_b, r, norm_r)</code> called after each iteration, defaults to <code>None</code>
+M: function or scipy.sparse.csr</em>matrix
+   Function that applies the preconditioner to a vector. Alternatively, <code>M</code> can be a matrix describing the precondioner.
+reorthogonalize: boolean
+    Whether to apply reorthogonalization of the residuals after each update, defaults to <code>False</code></p>
+
+<h2>Returns</h2>
+
+<p>x: numpy.ndarray
+    Solution of the system</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.array([[3.0, 1.0], [1.0, 2.0]])
+      M = jacobi(A)
+      b = np.array([4.0, 3.0])
+      cg(A, b, M=M)
+      array([1., 1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>precondition(x)</code> (Line 54)</h4>
+
+<p>No docstring</p>
+
+<h4><code>precondition(x)</code> (Line 61)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>boxfilter.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>boxfilter_rows_valid(src, r)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter_rows_same(src, r)</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter_rows_full(src, r)</code> (Line 61)</h4>
+
+<p>No docstring</p>
+
+<h4><code>boxfilter(src, radius, mode)</code> (Line 90)</h4>
+
+<p>Computes the boxfilter (uniform blur, i.e. blur with kernel :code:<code>np.ones(radius, radius)</code>) of an input image.</p>
+
+<p>Depending on the mode, the input image of size :math:<code>(h, w)</code> is either of shape</p>
+
+<ul>
+<li>:math:<code>(h - 2 r, w - 2 r)</code> in case of 'valid' mode</li>
+<li>:math:<code>(h, w)</code> in case of 'same' mode</li>
+<li>:math:<code>(h + 2 r, w + 2 r)</code> in case of 'full' mode</li>
+</ul>
+
+<p>.. image:: figures/padding.png</p>
+
+<h2>Parameters</h2>
+
+<p>src: numpy.ndarray
+    Input image having either shape :math:<code>h \times w \times d</code>  or :math:<code>h \times w</code>
+radius: int
+    Radius of boxfilter, defaults to :math:<code>3</code>
+mode: str
+    One of 'valid', 'same' or 'full', defaults to 'same'</p>
+
+<h2>Returns</h2>
+
+<p>dst: numpy.ndarray
+    Blurred image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      boxfilter(np.eye(5), radius=2, mode="valid")
+      array([[5.]])
+      boxfilter(np.eye(5), radius=2, mode="same")
+      array([[3., 3., 3., 2., 1.],
+             [3., 4., 4., 3., 2.],
+             [3., 4., 5., 4., 3.],
+             [2., 3., 4., 4., 3.],
+             [1., 2., 3., 3., 3.]])
+      boxfilter(np.eye(5), radius=2, mode="full")
+      array([[1., 1., 1., 1., 1., 0., 0., 0., 0.],
+             [1., 2., 2., 2., 2., 1., 0., 0., 0.],
+             [1., 2., 3., 3., 3., 2., 1., 0., 0.],
+             [1., 2., 3., 4., 4., 3., 2., 1., 0.],
+             [1., 2., 3., 4., 5., 4., 3., 2., 1.],
+             [0., 1., 2., 3., 4., 4., 3., 2., 1.],
+             [0., 0., 1., 2., 3., 3., 3., 2., 1.],
+             [0., 0., 0., 1., 2., 2., 2., 2., 1.],
+             [0., 0., 0., 0., 1., 1., 1., 1., 1.]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>distance.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>_propagate_1d_first_pass(d)</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_propagate_1d(d, v, z, f)</code> (Line 18)</h4>
+
+<p>No docstring</p>
+
+<h4><code>_propagate_distance(distance)</code> (Line 62)</h4>
+
+<p>No docstring</p>
+
+<h4><code>distance_transform(mask)</code> (Line 76)</h4>
+
+<p>For every non-zero value, compute the distance to the closest zero value.
+Based on :cite:<code>felzenszwalb2012distance</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>mask: numpy.ndarray
+    2D matrix of zero and nonzero values.</p>
+
+<h2>Returns</h2>
+
+<p>distance: numpy.ndarray
+    Distance to closest zero-valued pixel.</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      mask = np.random.rand(10, 20) &lt; 0.9
+      distance = distance_transform(mask)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>kdtree.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>KDTree</code> (Line 236)</h4>
+
+<p>KDTree implementation</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self, data_points, min_leaf_size)</code><br />
+  *Line 239: Constructs a KDTree for given data points. The implementation currently only supports data type <code>np.float32</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>data<em>points: numpy.ndarray (of type <code>np.float32</code>)
+    Dataset with shape :math:<code>n \times d</code>, where :math:<code>n</code> is the number of data points in the data set and :math:<code>d</code> is the dimension of each data point
+min</em>leaf_size: int
+    Minimum number of nodes in a leaf, defaults to 8</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      data<em>set = np.random.randn(100, 2)
+      tree = KDTree(data</em>set.astype(np.float32))*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<ul>
+<li><code>query(self, query_points, k)</code><br />
+*Line 285: Query the tree</li>
+</ul>
+
+<h2>Parameters</h2>
+
+<p>query_points: numpy.ndarray (of type <code>np.float32</code>)
+    Data points for which the next neighbours should be calculated
+k: int
+    Number of neighbors to find</p>
+
+<h2>Returns</h2>
+
+<p>distances: numpy.ndarray
+    Distances to the neighbors
+indices: numpy.ndarray
+    Indices of the k nearest neighbors in original data array</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      data<em>set = np.random.randn(100, 2)
+      tree = KDTree(data</em>set.astype(np.float32))
+      tree.query(np.array([[0.5,0.5]], dtype=np.float32), k=3)
+      (array([[0.14234178, 0.15879704, 0.26760164]], dtype=float32), array([[29, 21, 20]]))*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>timer.py</code></h2>
+
+<h3>Classes</h3>
+
+<h4><code>Timer</code> (Line 4)</h4>
+
+<p>Timer for benchmarking</p>
+
+<p><strong>Methods:</strong>
+- <code>__init__(self)</code><br />
+  <em>Line 7: Starts a timer</em></p>
+
+<ul>
+<li><code>stop(self, message)</code><br />
+*Line 12: Return and print time since last stop-call or initialization.
+Also print elapsed time if message is provided.</li>
+</ul>
+
+<h2>Parameters</h2>
+
+<p>message: str
+    Message to print in front of passed seconds</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      t = Timer()
+      t.stop()
+      2.6157200919999966
+      t = Timer()
+      t.stop('Test')
+      Test  - 11.654551 seconds
+      11.654551381000001*</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h2>File: <code>util.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>apply_to_channels(single_channel_func)</code> (Line 9)</h4>
+
+<p>Creates a new function which operates on each channel</p>
+
+<h2>Parameters</h2>
+
+<p>single<em>channel</em>func: function
+    Function that acts on a single color channel</p>
+
+<h2>Returns</h2>
+
+<p>channel_func: function
+    The same function that operates on all color channels</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      from scipy.signal import convolve2d
+      single<em>channel</em>fun = lambda x: convolve2d(x, np.ones((3, 3)), 'valid')
+      multi<em>channel</em>fun = apply<em>to</em>channels(single<em>channel</em>fun)
+      I = np.random.rand(480, 320, 3)
+      multi<em>channel</em>fun(I).shape
+      (478, 318, 3)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>vec_vec_dot(a, b)</code> (Line 55)</h4>
+
+<p>Computes the dot product of two vectors.</p>
+
+<h2>Parameters</h2>
+
+<p>a: numpy.ndarray
+    First vector (if np.ndim(a) &gt; 1 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Second vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: scalar
+    Dot product of <code>a</code> and <code>b</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      a = np.ones(2)
+      b = np.ones(2)
+      vec<em>vec</em>dot(a,b)
+      2.0</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>mat_vec_dot(A, b)</code> (Line 82)</h4>
+
+<p>Calculates the matrix vector product for two arrays.</p>
+
+<h2>Parameters</h2>
+
+<p>A: numpy.ndarray
+    Matrix (if np.ndim(A) &gt; 2 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: numpy.ndarray
+    Matrix vector product of both arrays</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      A = np.eye(2)
+      b = np.ones(2)
+      mat<em>vec</em>dot(A,b)
+      array([1., 1.])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>vec_vec_outer(a, b)</code> (Line 109)</h4>
+
+<p>Computes the outer product of two vectors</p>
+
+<p>a: numpy.ndarray
+    First vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)
+b: numpy.ndarray
+    Second vector (if np.ndim(b) &gt; 1 the function calculates the product for the two last axes)</p>
+
+<h2>Returns</h2>
+
+<p>product: numpy.ndarray
+    Outer product of <code>a</code> and <code>b</code> as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      a = np.arange(1,3)
+      b = np.arange(1,3)
+      vec<em>vec</em>outer(a,b)
+      array([[1, 2],
+             [2, 4]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>fix_trimap(trimap, lower_threshold, upper_threshold)</code> (Line 135)</h4>
+
+<p>Fixes broken trimap :math:<code>T</code> by thresholding the values</p>
+
+<p>.. math::
+    T^{\text{fixed}}<em>{ij}=
+    \begin{cases}
+        0,&amp;\text{if } T</em>{ij}&lt;\text{lower_threshold}\
+        1,&amp;\text{if }T_{ij}&gt;\text{upper_threshold}\
+        0.5, &amp;\text{otherwise}.\
+    \end{cases}</p>
+
+<h2>Parameters</h2>
+
+<p>trimap: numpy.ndarray
+    Possibly broken trimap
+lower<em>threshold: float
+    Threshold used to determine background pixels, defaults to 0.1
+upper</em>threshold: float
+    Threshold used to determine foreground pixels, defaults to 0.9</p>
+
+<h2>Returns</h2>
+
+<p>fixed_trimap: numpy.ndarray
+    Trimap having values in :math:<code>\{0, 0.5, 1\}</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      trimap = np.array([0,0.1, 0.4, 0.9, 1])
+      fix_trimap(trimap, 0.2, 0.8)
+      array([0. , 0. , 0.5, 1. , 1. ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>isiterable(obj)</code> (Line 186)</h4>
+
+<p>Checks if an object is iterable</p>
+
+<h2>Parameters</h2>
+
+<p>obj: object
+    Object to check</p>
+
+<h2>Returns</h2>
+
+<p>is_iterable: bool
+    Boolean variable indicating whether the object is iterable</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      l = []
+      isiterable(l)
+      True</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>_resize_pil_image(image, size, resample)</code> (Line 213)</h4>
+
+<p>No docstring</p>
+
+<h4><code>load_image(path, mode, size, resample)</code> (Line 232)</h4>
+
+<p>This function can be used to load an image from a file.</p>
+
+<h2>Parameters</h2>
+
+<p>path: str
+    Path of image to load.
+mode: str
+    Can be "GRAY", "RGB" or something else (see PIL.convert())</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Loaded image</p>
+
+<h4><code>save_image(path, image, make_directory)</code> (Line 263)</h4>
+
+<p>Given a path, save an image there.</p>
+
+<h2>Parameters</h2>
+
+<p>path: str
+    Where to save the image.
+image: numpy.ndarray, dtype in [np.uint8, np.float32, np.float64]
+    Image to save.
+    Images of float dtypes should be in range [0, 1].
+    Images of uint8 dtype should be in range [0, 255]
+make_directory: bool
+    Whether to create the directories needed for the image path.</p>
+
+<h4><code>to_rgb8(image)</code> (Line 290)</h4>
+
+<p>Convertes an image to rgb8 color space</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image to convert</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Converted image with same height and width as input image but with three color channels</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      I = np.eye(2)
+      to_rgb8(I)
+      array([[[255, 255, 255],
+              [  0,   0,   0]],
+             [[  0,   0,   0],
+              [255, 255, 255]]], dtype=uint8)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>make_grid(images, nx, ny, dtype)</code> (Line 334)</h4>
+
+<p>Plots a grid of images.</p>
+
+<h2>Parameters</h2>
+
+<p>images : list of numpy.ndarray
+    List of images to plot
+nx: int
+    Number of rows
+ny: int
+    Number of columns
+dtype: type
+    Data type of output array</p>
+
+<h2>Returns</h2>
+
+<p>grid: numpy.ndarray
+   Grid of images with datatype <code>dtype</code></p>
+
+<h4><code>show_images(images)</code> (Line 421)</h4>
+
+<p>Plot grid of images.</p>
+
+<h2>Parameters</h2>
+
+<p>images : list of numpy.ndarray
+    List of images to plot
+height : int, matrix
+    Height in pixels the output grid, defaults to 512</p>
+
+<h4><code>trimap_split(trimap, flatten, bg_threshold, fg_threshold)</code> (Line 439)</h4>
+
+<p>This function splits the trimap into foreground pixels, background pixels, and unknown pixels.</p>
+
+<p>Foreground pixels are pixels where the trimap has values larger than or equal to <code>fg_threshold</code> (default: 0.9).
+Background pixels are pixels where the trimap has values smaller than or equal to <code>bg_threshold</code> (default: 0.1).
+Pixels with other values are assumed to be unknown.</p>
+
+<h2>Parameters</h2>
+
+<p>trimap: numpy.ndarray
+    Trimap with shape :math:<code>h \times w</code>
+flatten: bool
+    If true np.flatten is called on the trimap</p>
+
+<h2>Returns</h2>
+
+<p>is<em>fg: numpy.ndarray
+    Boolean array indicating which pixel belongs to the foreground
+is</em>bg: numpy.ndarray
+    Boolean array indicating which pixel belongs to the background
+is<em>known: numpy.ndarray
+    Boolean array indicating which pixel is known
+is</em>unknown: numpy.ndarray
+    Boolean array indicating which pixel is unknown
+bg<em>threshold: float
+    Pixels with smaller trimap values will be considered background.
+fg</em>threshold: float
+    Pixels with larger trimap values will be considered foreground.</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import *
+      trimap = np.array([[1,0],[0.5,0.2]])
+      is<em>fg, is</em>bg, is<em>known, is</em>unknown = trimap<em>split(trimap)
+      is</em>fg
+      array([ True, False, False, False])
+      is<em>bg
+      array([False,  True, False, False])
+      is</em>known
+      array([ True,  True, False, False])
+      is_unknown
+      array([False, False,  True,  True])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>sanity_check_image(image)</code> (Line 528)</h4>
+
+<p>Performs a sanity check for input images. Image values should be in the
+range [0, 1], the <code>dtype</code> should be <code>np.float32</code> or <code>np.float64</code> and the
+image shape should be <code>(?, ?, 3)</code>.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    Image with shape :math:<code>h \times w \times 3</code></p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>import numpy as np
+      from pymatting import check<em>image
+      image = (np.random.randn(64, 64, 2) * 255).astype(np.int32)
+      sanity</em>check_image(image)
+      <strong>main</strong>:1: UserWarning: Expected RGB image of shape (?, ?, 3), but image.shape is (64, 64, 2).
+      <strong>main</strong>:1: UserWarning: Image values should be in [0, 1], but image.min() is -933.
+      <strong>main</strong>:1: UserWarning: Image values should be in [0, 1], but image.max() is 999.
+      <strong>main</strong>:1: UserWarning: Unexpected image.dtype int32. Are you sure that you do not want to use np.float32 or np.float64 instead?</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>blend(foreground, background, alpha)</code> (Line 581)</h4>
+
+<p>This function composes a new image for given foreground image, background image and alpha matte.</p>
+
+<p>This is done by applying the composition equation</p>
+
+<p>.. math::
+    I = \alpha F + (1-\alpha)B.</p>
+
+<h2>Parameters</h2>
+
+<p>foreground: numpy.ndarray
+    Foreground image
+background: numpy.ndarray
+    Background image
+alpha: numpy.ndarray
+    Alpha matte</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Composed image as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      foreground = load<em>image("data/lemur/lemur</em>foreground.png", "RGB")
+      background = load<em>image("data/lemur/beach.png", "RGB")
+      alpha = load</em>image("data/lemur/lemur_alpha.png", "GRAY")
+      I = blend(foreground, background, alpha)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>stack_images()</code> (Line 617)</h4>
+
+<p>This function stacks images along the third axis.
+This is useful for combining e.g. rgb color channels or color and alpha channels.</p>
+
+<h2>Parameters</h2>
+
+<p>*images: numpy.ndarray
+    Images to be stacked.</p>
+
+<h2>Returns</h2>
+
+<p>image: numpy.ndarray
+    Stacked images as numpy.ndarray</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting.util.util import stack<em>images
+      import numpy as np
+      I = stack</em>images(np.random.rand(4,5,3), np.random.rand(4,5,3))
+      I.shape
+      (4, 5, 6)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>row_sum(A)</code> (Line 646)</h4>
+
+<p>Calculate the sum of each row of a matrix</p>
+
+<h2>Parameters</h2>
+
+<p>A: np.ndarray or scipy.sparse.spmatrix
+    Matrix to sum rows of</p>
+
+<h2>Returns</h2>
+
+<p>row_sums: np.ndarray
+    Vector of summed rows</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.random.rand(2,2)
+      A
+      array([[0.62750946, 0.12917617],
+             [0.8599449 , 0.5777254 ]])
+      row_sum(A)
+      array([0.75668563, 1.4376703 ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>normalize_rows(A, threshold)</code> (Line 675)</h4>
+
+<p>Normalize the rows of a matrix</p>
+
+<p>Rows with sum below threshold are left as-is.</p>
+
+<h2>Parameters</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix to normalize
+threshold: float
+    Threshold to avoid division by zero</p>
+
+<h2>Returns</h2>
+
+<p>A: scipy.sparse.spmatrix
+    Matrix with normalized rows</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      A = np.arange(4).reshape(2,2)
+      normalize_rows(A)
+      array([[0. , 1. ],
+             [0.4, 0.6]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>grid_coordinates(width, height, flatten)</code> (Line 715)</h4>
+
+<p>Calculates image pixel coordinates for an image with a specified shape</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+flatten: bool
+    Whether the array containing the coordinates should be flattened or not, defaults to False</p>
+
+<h2>Returns</h2>
+
+<p>x: numpy.ndarray
+    x coordinates
+y: numpy.ndarray
+    y coordinates</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      x, y = grid_coordinates(2,2)
+      x
+      array([[0, 1],
+             [0, 1]])
+      y
+      array([[0, 0],
+             [1, 1]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>sparse_conv_matrix_with_offsets(width, height, kernel, dx, dy)</code> (Line 757)</h4>
+
+<p>Calculates a convolution matrix that can be applied to a vectorized image</p>
+
+<p>Additionally, this function allows to specify which pixels should be used for the convoltion, i.e.</p>
+
+<p>.. math:: \left(I * K\right)<em>{ij} = \sum</em>k K<em>k I</em>{i+{\Delta<em>y}</em>k,j+{\Delta<em>y}</em>k},</p>
+
+<p>where :math:<code>K</code> is the flattened convolution kernel.</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+kernel: numpy.ndarray
+    Convolutional kernel
+dx: numpy.ndarray
+    Offset in x direction
+dy: nunpy.ndarray
+    Offset in y direction</p>
+
+<h2>Returns</h2>
+
+<p>M: scipy.sparse.csr_matrix
+    Convolution matrix</p>
+
+<h4><code>sparse_conv_matrix(width, height, kernel)</code> (Line 807)</h4>
+
+<p>Calculates a convolution matrix that can be applied to a vectorized image</p>
+
+<h2>Parameters</h2>
+
+<p>width: int
+    Width of the input image
+height: int
+    Height of the input image
+kernel: numpy.ndarray
+    Convolutional kernel</p>
+
+<h2>Returns</h2>
+
+<p>M: scipy.sparse.csr_matrix
+    Convolution matrix</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      sparse<em>conv</em>matrix(3,3,np.ones((3,3)))
+      &lt;9x9 sparse matrix of type '<class 'numpy.float64'>'
+      with 49 stored elements in Compressed Sparse Row format></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>weights_to_laplacian(W, normalize, regularization)</code> (Line 840)</h4>
+
+<p>Calculates the random walk normalized Laplacian matrix from the weight matrix</p>
+
+<h2>Parameters</h2>
+
+<p>W: numpy.ndarray
+    Array of weights
+normalize: bool
+    Whether the rows of W should be normalized to 1, defaults to True
+regularization: float
+    Regularization strength, defaults to 0, i.e. no regularizaion</p>
+
+<h2>Returns</h2>
+
+<p>L: scipy.sparse.spmatrix
+    Laplacian matrix</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      weights<em>to</em>laplacian(np.ones((4,4)))
+      matrix([[ 0.75, -0.25, -0.25, -0.25],
+              [-0.25,  0.75, -0.25, -0.25],
+              [-0.25, -0.25,  0.75, -0.25],
+              [-0.25, -0.25, -0.25,  0.75]])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>normalize(values)</code> (Line 878)</h4>
+
+<p>Normalizes an array such that all values are between 0 and 1</p>
+
+<h2>Parameters</h2>
+
+<p>values: numpy.ndarray
+    Array to normalize</p>
+
+<h2>Returns</h2>
+
+<p>result: numpy.ndarray
+    Normalized array</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      normalize(np.array([0, 1, 3, 10]))
+      array([0. , 0.1, 0.3, 1. ])</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>div_round_up(x, n)</code> (Line 904)</h4>
+
+<p>Divides a number x by another integer n and rounds up the result</p>
+
+<h2>Parameters</h2>
+
+<p>x: int
+    Numerator
+n: int
+    Denominator</p>
+
+<h2>Returns</h2>
+
+<p>result: int
+    Result</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      div<em>round</em>up(3,2)
+      2</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>remove_background_bicolor(image, fg_color, bg_color)</code> (Line 928)</h4>
+
+<p>Remove background from image with at most two colors.
+Might not work if image has more than two colors.</p>
+
+<h2>Parameters</h2>
+
+<p>image: numpy.ndarray
+    RGB input image
+fg<em>color: numpy.ndarray
+    RGB Foreground color
+bg</em>color: numpy.ndarray
+    RGB Background color</p>
+
+<h2>Returns</h2>
+
+<p>output: numpy.ndarray
+    RGBA output image</p>
+
+<h2>Example</h2>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>from pymatting import *
+      import numpy as np
+      image = np.random.rand(480, 320, 3)
+      fg<em>color = np.random.rand(3)
+      bg</em>color = np.random.rand(3)
+      output = remove<em>background</em>bicolor(image, fg<em>color, bg</em>color)
+      print(output.shape)
+      (480, 320, 4)</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<h4><code>multi_channel_func(image)</code> (Line 35)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>__init__.py</code></h2>
+
+<h2>File: <code>download_images.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>is_pymatting_root()</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>download_files()</code> (Line 37)</h4>
+
+<p>No docstring</p>
+
+<h4><code>extract_files()</code> (Line 89)</h4>
+
+<p>No docstring</p>
+
+<h4><code>main()</code> (Line 103)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_boxfilter.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>run_boxfilter(m, n, r, mode, n_runs)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>test_boxfilter()</code> (Line 32)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_cg.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_cg()</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h4><code>precondition(x)</code> (Line 21)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_distance.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>distance_transform_naive(mask)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>distance_transform_naive_vectorized(mask)</code> (Line 33)</h4>
+
+<p>No docstring</p>
+
+<h4><code>test_distance()</code> (Line 45)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_estimate_alpha.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_alpha()</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_foreground.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_foreground()</code> (Line 11)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_ichol.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_ichol()</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_kdtree.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>run_kdtree()</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+<h4><code>test_kdtree()</code> (Line 44)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_laplacians.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_laplacians()</code> (Line 11)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_lkm.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_lkm()</code> (Line 13)</h4>
+
+<p>No docstring</p>
+
+<h4><code>A_lkm(x)</code> (Line 30)</h4>
+
+<p>No docstring</p>
+
+<h4><code>jacobi_lkm(r)</code> (Line 35)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_preconditioners.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_preconditioners()</code> (Line 14)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_remove_background_bicolor.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_remove_background_bicolor()</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_simple_api.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_cutout()</code> (Line 6)</h4>
+
+<p>No docstring</p>
+
+<h2>File: <code>test_util.py</code></h2>
+
+<h3>Functions</h3>
+
+<h4><code>test_util()</code> (Line 5)</h4>
+
+<p>No docstring</p>
+
+<h4><code>conv(image, kernel)</code> (Line 7)</h4>
+
+<p>No docstring</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

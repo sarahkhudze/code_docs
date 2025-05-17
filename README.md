@@ -66,6 +66,12 @@ CodeDocs is a web-based application that automatically generates comprehensive d
 - Easy file management
 - Multiple download options
 
+## Environment Setup
+
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env```
+
 ## Security Features
 
 - Secure user authentication
@@ -80,4 +86,6 @@ GNU General Public License v3.0
 ## Contact
 
 info@sarahkhudze.com
-www.sarahkhudze.com
+webstermoyo6@gmail.com
+mannuetendaimakumbe@yahoo.com
+
